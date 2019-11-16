@@ -44,7 +44,19 @@ namespace WindowsFormsApp1
         public void translate ()
         {
             label2.Text = "";
-            string text = vs[comboBox2.SelectedIndex + 1];
+            string text;
+            if (comboBox2.SelectedIndex == 0)
+            {
+                 text = vs[comboBox2.SelectedIndex + 1];
+            }
+            else
+            {
+                 text = vs[comboBox2.SelectedIndex + 2];
+            }
+            
+
+
+
             char[] l = text.ToCharArray();
             for (int y = 0; y < text.Length; y++)
             {
@@ -64,13 +76,18 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             Shifr.raskl(comboBox1.Text);
-           // translate();
             stroka = textBox1.Text;
             Shifr.doit(stroka, alf);
             StreamWriter f = new StreamWriter("pas.txt", true);
             f.WriteLine(textBox2.Text+":"+Shifr.textshifr);
             f.Close();
             Form1_Load(sender, e);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Shifr.raskl(comboBox1.Text);
+            translate();
         }
     }
 }
