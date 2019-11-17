@@ -37,6 +37,9 @@ namespace WindowsFormsApp1
             buttonWrite.BackgroundImageLayout = ImageLayout.Stretch;
             buttonRead.BackgroundImage = Properties.Resources.button;
             buttonRead.BackgroundImageLayout = ImageLayout.Stretch;
+            faqbutton.BackgroundImage = Properties.Resources.button;
+            faqbutton.BackgroundImageLayout = ImageLayout.Stretch;
+            
             comboBoxSite.Items.Clear();
 
            String pas = File.ReadAllText("pas.txt");
