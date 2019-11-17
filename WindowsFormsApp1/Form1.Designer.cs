@@ -29,93 +29,104 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonWrite = new System.Windows.Forms.Button();
+            this.textBoxPas = new System.Windows.Forms.TextBox();
+            this.comboBoxLang = new System.Windows.Forms.ComboBox();
+            this.comboBoxSite = new System.Windows.Forms.ComboBox();
+            this.textBoxSite = new System.Windows.Forms.TextBox();
+            this.buttonRead = new System.Windows.Forms.Button();
+            this.faqbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonWrite
             // 
-            this.button1.Location = new System.Drawing.Point(21, 114);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(161, 28);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Записать в файл";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonWrite.Location = new System.Drawing.Point(21, 114);
+            this.buttonWrite.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonWrite.Name = "buttonWrite";
+            this.buttonWrite.Size = new System.Drawing.Size(221, 28);
+            this.buttonWrite.TabIndex = 3;
+            this.buttonWrite.Text = "Записать в файл";
+            this.buttonWrite.UseVisualStyleBackColor = true;
+            this.buttonWrite.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // textBoxPas
             // 
-            this.textBox1.Location = new System.Drawing.Point(21, 81);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(221, 22);
-            this.textBox1.TabIndex = 1;
+            this.textBoxPas.Location = new System.Drawing.Point(21, 81);
+            this.textBoxPas.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxPas.Name = "textBoxPas";
+            this.textBoxPas.Size = new System.Drawing.Size(221, 22);
+            this.textBoxPas.TabIndex = 2;
             // 
-            // comboBox1
+            // comboBoxLang
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxLang.FormattingEnabled = true;
+            this.comboBoxLang.Items.AddRange(new object[] {
             "Русская",
             "English"});
-            this.comboBox1.Location = new System.Drawing.Point(21, 16);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(161, 24);
-            this.comboBox1.TabIndex = 6;
-            this.comboBox1.Text = "Выбрать раскладку";
+            this.comboBoxLang.Location = new System.Drawing.Point(21, 16);
+            this.comboBoxLang.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxLang.Name = "comboBoxLang";
+            this.comboBoxLang.Size = new System.Drawing.Size(182, 24);
+            this.comboBoxLang.TabIndex = 0;
+            this.comboBoxLang.Text = "Выбрать раскладку";
             // 
-            // comboBox2
+            // comboBoxSite
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(256, 16);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(136, 24);
-            this.comboBox2.TabIndex = 7;
-            this.comboBox2.Text = "Выбрать сайт";
+            this.comboBoxSite.FormattingEnabled = true;
+            this.comboBoxSite.Location = new System.Drawing.Point(252, 15);
+            this.comboBoxSite.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxSite.Name = "comboBoxSite";
+            this.comboBoxSite.Size = new System.Drawing.Size(160, 24);
+            this.comboBoxSite.TabIndex = 4;
+            this.comboBoxSite.Text = "Выбрать сайт";
             // 
-            // textBox2
+            // textBoxSite
             // 
-            this.textBox2.Location = new System.Drawing.Point(21, 49);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(221, 22);
-            this.textBox2.TabIndex = 10;
+            this.textBoxSite.Location = new System.Drawing.Point(21, 49);
+            this.textBoxSite.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSite.Name = "textBoxSite";
+            this.textBoxSite.Size = new System.Drawing.Size(221, 22);
+            this.textBoxSite.TabIndex = 1;
             // 
-            // button2
+            // buttonRead
             // 
-            this.button2.Location = new System.Drawing.Point(256, 44);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 28);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Дешифровать";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.buttonRead.Location = new System.Drawing.Point(250, 43);
+            this.buttonRead.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonRead.Name = "buttonRead";
+            this.buttonRead.Size = new System.Drawing.Size(162, 28);
+            this.buttonRead.TabIndex = 5;
+            this.buttonRead.Text = "Дешифровать";
+            this.buttonRead.UseVisualStyleBackColor = true;
+            this.buttonRead.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // faqbutton
+            // 
+            this.faqbutton.Location = new System.Drawing.Point(210, 12);
+            this.faqbutton.Name = "faqbutton";
+            this.faqbutton.Size = new System.Drawing.Size(30, 30);
+            this.faqbutton.TabIndex = 6;
+            this.faqbutton.Text = "?";
+            this.faqbutton.UseVisualStyleBackColor = true;
+            this.faqbutton.Click += new System.EventHandler(this.faqbutton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(482, 153);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.faqbutton);
+            this.Controls.Add(this.buttonRead);
+            this.Controls.Add(this.textBoxSite);
+            this.Controls.Add(this.comboBoxSite);
+            this.Controls.Add(this.comboBoxLang);
+            this.Controls.Add(this.buttonWrite);
+            this.Controls.Add(this.textBoxPas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(500, 200);
             this.MinimumSize = new System.Drawing.Size(500, 200);
             this.Name = "Form1";
             this.Text = "Шифровщик";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -124,12 +135,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonWrite;
+        private System.Windows.Forms.TextBox textBoxPas;
+        private System.Windows.Forms.ComboBox comboBoxLang;
+        private System.Windows.Forms.ComboBox comboBoxSite;
+        private System.Windows.Forms.TextBox textBoxSite;
+        private System.Windows.Forms.Button buttonRead;
+        private System.Windows.Forms.Button faqbutton;
     }
 }
 
