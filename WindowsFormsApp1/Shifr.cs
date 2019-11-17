@@ -5,6 +5,7 @@ using System.Text;
 
 using System.IO;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
@@ -19,9 +20,14 @@ namespace WindowsFormsApp1
             {
                 lang = "alfrus.txt";
             }
-            else
+            else if (lang == "English")
             {
                 lang = "alfeng.txt";
+            }
+            else
+            {
+                MessageBox.Show("Русский по умолчанию");
+                lang = "alfrus.txt";
             }
                 string l = "";
                 string[] f = File.ReadAllLines(lang);

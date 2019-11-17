@@ -14,10 +14,6 @@ using System.Runtime.InteropServices;
 
 namespace WindowsFormsApp1
 {
-
-
-
-
     public partial class Form1 : Form
     {
         public string result = "";
@@ -30,29 +26,26 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-
-
         private void Form1_Load(object sender, EventArgs e)
         {
-            textBox1.SetWatermark("Сайт, в котором будет аккаунт");
-            textBox2.SetWatermark("Пароль(пробелы заменить на _");
+
+            textBoxSite.SetWatermark("Сайт, в котором будет аккаунт");
+            textBoxPas.SetWatermark("Пароль(пробелы заменить на _");
             BackgroundImageLayout = ImageLayout.Stretch;
             BackgroundImage = Properties.Resources.backgraund;
-            button1.BackgroundImage = Properties.Resources.button;
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.BackgroundImage = Properties.Resources.button;
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-           
+            buttonWrite.BackgroundImage = Properties.Resources.button;
+            buttonWrite.BackgroundImageLayout = ImageLayout.Stretch;
+            buttonRead.BackgroundImage = Properties.Resources.button;
+            buttonRead.BackgroundImageLayout = ImageLayout.Stretch;
+            comboBoxSite.Items.Clear();
 
-
-            comboBox2.Items.Clear();
            String pas = File.ReadAllText("pas.txt");
             vs = pas.Split(new char[] { ':', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
             for(int i =0; i<vs.Length; i++)
             {
                 if(i%2==0)
                 {
-                    comboBox2.Items.Add(vs[i]);
+                    comboBoxSite.Items.Add(vs[i]);
                 }
             }
            
@@ -61,15 +54,15 @@ namespace WindowsFormsApp1
 
         public void translate ()
         {
-            textBox2.Text = "";
+            textBoxPas.Text = "";
             string text;
-            if (comboBox2.SelectedIndex == 0)
+            if (comboBoxSite.SelectedIndex == 0)
             {
-                 text = vs[comboBox2.SelectedIndex + 1];
+                 text = vs[comboBoxSite.SelectedIndex + 1];
             }
             else
             {
-                 text = vs[comboBox2.SelectedIndex + 2];
+                 text = vs[comboBoxSite.SelectedIndex + 2];
             }
             
 
@@ -84,7 +77,8 @@ namespace WindowsFormsApp1
                     {
                         int d = alf.Length - i - y - 1;
 
-                        textBox2.Text = textBox2.Text + alf[d];
+                        textBoxPas.Text = textBoxPas.Text + alf[d];
+                        
                     }
                 }
 
@@ -93,22 +87,31 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Shifr.raskl(comboBox1.Text);
-            stroka = textBox1.Text;
+            Shifr.raskl(comboBoxLang.Text);
+            stroka = textBoxPas.Text;
             Shifr.doit(stroka, alf);
             StreamWriter f = new StreamWriter("pas.txt", true);
-            f.WriteLine(textBox2.Text+":"+Shifr.textshifr);
+            f.WriteLine(textBoxSite.Text + ":" + Shifr.textshifr + Environment.NewLine);
             f.Close();
+            textBoxPas.Text = "";
+            textBoxSite.Text = "";
+            MessageBox.Show("Готово.");
             Form1_Load(sender, e);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Shifr.raskl(comboBox1.Text);
+            Shifr.raskl(comboBoxLang.Text);
             translate();
+            MessageBox.Show("Казалось бы, расшифровал...");
         }
 
+        private void faqbutton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Для шифрования:" + Environment.NewLine + "1)выбери раскладку" + Environment.NewLine + "2)введи сайт" + Environment.NewLine +"3)введи пароль, нажми кнопку ''защифровать''" + Environment.NewLine + "4)помолись" + Environment.NewLine+ Environment.NewLine + Environment.NewLine + "Для дешифровки:" + Environment.NewLine + "1)выбери раскладку" + Environment.NewLine + "2)выбери сайт" + Environment.NewLine + "3)нажми кнопку ''Дешифровать''" + Environment.NewLine + "4)помолись" + Environment.NewLine + "Приятного использования");
+        }
     }
+
 
     public static class TextBoxWatermarkExtensionMethod
     {
