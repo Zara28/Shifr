@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
             {
                 lang = "alfrus.txt";
             }
-            else if (lang == "English")
+            else
             {
                 lang = "alfeng.txt";
             }

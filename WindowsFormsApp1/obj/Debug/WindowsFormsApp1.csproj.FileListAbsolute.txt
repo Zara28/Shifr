@@ -7,3 +7,13 @@ C:\Users\Алексей\source\repos\WindowsFormsApp1\WindowsFormsApp1\bin\Debug
 C:\Users\Алексей\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\Алексей\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\Алексей\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\Demon\Desktop\al\Shifr\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Demon\Desktop\al\Shifr\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Demon\Desktop\al\Shifr\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Demon\Desktop\al\Shifr\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\Demon\Desktop\al\Shifr\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\Demon\Desktop\al\Shifr\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Demon\Desktop\al\Shifr\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\Demon\Desktop\al\Shifr\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\Demon\Desktop\al\Shifr\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Demon\Desktop\al\Shifr\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
