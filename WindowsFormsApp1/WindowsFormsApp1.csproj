@@ -81,5 +81,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anon0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1486564389-lock-red_81516 %281%29.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
