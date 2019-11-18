@@ -15,11 +15,11 @@ namespace WindowsFormsApp1
 
         public static void raskl(string lang)
         {
-            if (lang == "Русская")
+            if (lang == "rus")
             {
                 lang = "alfrus.txt";
             }
-            else if (lang == "English")
+            else if (lang == "eng")
             {
                 lang = "alfeng.txt";
             }
@@ -43,10 +43,39 @@ namespace WindowsFormsApp1
                     if (a[y] == alf[i])
                     {
                         int c = Math.Abs(alf.Length - 1 - i - y);
-                        int d = alf.Length - c - y-1;
-                        textshifr = textshifr + alf[c];
+                        int d = alf.Length - c - y - 1;
+                       
+                            textshifr = textshifr + alf[c];
                         
-                        textdeshifr = textdeshifr + alf[d];
+                    }
+                }
+
+            }
+        }
+        public static void translate(string site)
+        {
+            Shifr.textdeshifr = "";
+            string text = "";
+            string lang = "";
+            for (int i = 0; i < Form1.vs.Length; i++)
+            {
+                if (site == Form1.vs[i])
+                {
+                    text = Form1.vs[i + 1];
+                    lang = Form1.vs[i - 1];
+                }
+            }
+            Shifr.raskl(lang);
+            char[] l = text.ToCharArray();
+            for (int y = 0; y < text.Length; y++)
+            {
+                for (int i = 0; i < Form1.alf.Length; i++)
+                {
+                    if (l[y] == Form1.alf[i])
+                    {
+                        int d = Form1.alf.Length - i - y - 1;
+
+                        Shifr.textdeshifr = Shifr.textdeshifr + Form1.alf[d];
                     }
                 }
 

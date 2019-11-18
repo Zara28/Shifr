@@ -32,46 +32,17 @@ namespace WindowsFormsApp1
             vs = pas.Split(new char[] { ':', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
             for(int i =0; i<vs.Length; i++)
             {
-                if(i%2==0)
+                if(vs[i].Contains("rus")|| vs[i].Contains("eng"))
                 {
-                    comboBox2.Items.Add(vs[i]);
+                    comboBox2.Items.Add(vs[i+1]);
                 }
             }
-           
 
-        }
-
-        public void translate ()
-        {
-            label2.Text = "";
-            string text;
-            if (comboBox2.SelectedIndex == 0)
-            {
-                 text = vs[comboBox2.SelectedIndex + 1];
-            }
-            else
-            {
-                 text = vs[comboBox2.SelectedIndex + 2];
-            }
+            comboBox1.SelectedIndex = 0;
             
-
-
-
-            char[] l = text.ToCharArray();
-            for (int y = 0; y < text.Length; y++)
-            {
-                for (int i = 0; i < alf.Length; i++)
-                {
-                    if (l[y] == alf[i])
-                    {
-                        int d = alf.Length - i - y - 1;
-
-                        label2.Text = label2.Text + alf[d];
-                    }
-                }
-
-            }
         }
+
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -79,15 +50,19 @@ namespace WindowsFormsApp1
             stroka = textBox1.Text;
             Shifr.doit(stroka, alf);
             StreamWriter f = new StreamWriter("pas.txt", true);
-            f.WriteLine(textBox2.Text+":"+Shifr.textshifr);
+            f.WriteLine(comboBox1.Text +":"+textBox2.Text+":"+Shifr.textshifr);
             f.Close();
             Form1_Load(sender, e);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            label2.Text = "";
             Shifr.raskl(comboBox1.Text);
-            translate();
+            Shifr.translate(comboBox2.Text);
+            label2.Text = Shifr.textdeshifr;
         }
+
+       
     }
 }
