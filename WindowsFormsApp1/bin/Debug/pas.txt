@@ -1,4 +1,2 @@
-﻿eng:Git:0TzQ5
-rus:Git2:дгвб
-rus:Git2:дгвба
-rus:Пше3:ХБАБа
+﻿rus:Git:дгв7ч%яЧ7%
+eng:GitLab:дгв7ч%яЧ7%KWlJ5%tcbDa%0%

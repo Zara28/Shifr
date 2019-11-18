@@ -35,22 +35,28 @@ namespace WindowsFormsApp1
         }
         public static void doit(string str, char [] alf)
         {
-            char[] a = str.ToCharArray();
-            for (int y = 0; y < str.Length; y++)
+            string [] st = str.Split(new char[] {'%'}, StringSplitOptions.RemoveEmptyEntries);
+            for( int l = 0; l <st.Length; l++)
             {
-                for (int i = 0; i < alf.Length; i++)
+                char[] a = st[l].ToCharArray();
+                for (int y = 0; y < a.Length; y++)
                 {
-                    if (a[y] == alf[i])
+                    for (int i = 0; i < alf.Length; i++)
                     {
-                        int c = Math.Abs(alf.Length - 1 - i - y);
-                        int d = alf.Length - c - y - 1;
-                       
-                            textshifr = textshifr + alf[c];
-                        
-                    }
-                }
+                        if (a[y] == alf[i])
+                        {
+                            int c = Math.Abs(alf.Length - 1 - i - y);
+                            int d = alf.Length - c - y - 1;
 
+                            textshifr = textshifr + alf[c];
+
+                        }
+                    }
+
+                }
+                textshifr = textshifr + '%';
             }
+            textdeshifr = textshifr;
         }
         public static void translate(string site)
         {
@@ -66,20 +72,25 @@ namespace WindowsFormsApp1
                 }
             }
             Shifr.raskl(lang);
-            char[] l = text.ToCharArray();
-            for (int y = 0; y < text.Length; y++)
+            string[] h = text.Split(new char[] {'%'}, StringSplitOptions.RemoveEmptyEntries);
+            for(int m = 0; m<h.Length; m++)
             {
-                for (int i = 0; i < Form1.alf.Length; i++)
+                char[] l = h[m].ToCharArray();
+                for (int y = 0; y < h[m].Length; y++)
                 {
-                    if (l[y] == Form1.alf[i])
+                    for (int i = 0; i < Form1.alf.Length; i++)
                     {
-                        int d = Form1.alf.Length - i - y - 1;
+                        if (l[y] == Form1.alf[i])
+                        {
+                            int d = Form1.alf.Length - i - y - 1;
 
-                        Shifr.textdeshifr = Shifr.textdeshifr + Form1.alf[d];
+                            Shifr.textdeshifr = Shifr.textdeshifr + Form1.alf[d];
+                        }
                     }
-                }
 
+                }
             }
+            
         }
     }
 }

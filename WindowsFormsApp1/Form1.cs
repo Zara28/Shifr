@@ -48,6 +48,17 @@ namespace WindowsFormsApp1
         {
             Shifr.raskl(comboBox1.Text);
             stroka = textBox1.Text;
+            char[] k = stroka.ToArray();
+            stroka = "";
+            for(int i = 0; i<k.Length; i++)
+            {
+                if (i % 5 == 0)
+                {
+                    stroka = stroka + "%" + k[i];
+                }
+                else stroka = stroka + k[i];
+            }
+            label1.Text = Shifr.textdeshifr;
             Shifr.doit(stroka, alf);
             StreamWriter f = new StreamWriter("pas.txt", true);
             f.WriteLine(comboBox1.Text +":"+textBox2.Text+":"+Shifr.textshifr);
