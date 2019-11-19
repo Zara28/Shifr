@@ -11,8 +11,8 @@ C:\Users\Алексей\Desktop\Алена\UlGPU\WindowsFormsApp1\WindowsFormsAp
 C:\Users\Алексей\Desktop\Алена\UlGPU\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
 C:\Users\Алексей\Desktop\Алена\UlGPU\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
 C:\Users\Алексей\Desktop\Алена\UlGPU\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
-C:\Users\Алексей\Desktop\Алена\UlGPU\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
 C:\Users\Алексей\Desktop\Алена\UlGPU\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
 C:\Users\Алексей\Desktop\Алена\UlGPU\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
 C:\Users\Алексей\Desktop\Алена\UlGPU\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\Алексей\Desktop\Алена\UlGPU\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Алексей\Desktop\Алена\UlGPU\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Encryption.Form1.resources
