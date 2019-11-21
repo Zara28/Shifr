@@ -10,10 +10,26 @@ namespace Encryption
 {
     class Shifr
     {
-        
+        public static void read()
+        {
+            string lang;
+            if (!Config.rus_lang)
+            {
+                lang = "Resours/lang_eng.txt";
+            }
+           else
+            {
+                lang = "Resours/lang_rus.txt";
+            }
+            StreamReader file = new StreamReader(lang);
+            string b = file.ReadToEnd();
+            Config.names = b.Split(new char[] { ':', '"', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+
+            file.Close();
+        }
         public static void raskl()
         {
-                string lang = "alfeng.txt";
+                string lang = "Resours/alfeng.txt";
                 string l = "";
                 string[] f = File.ReadAllLines(lang);
                 for (int i = 0; i < f.Count(); i++)

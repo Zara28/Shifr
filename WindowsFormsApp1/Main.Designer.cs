@@ -1,6 +1,6 @@
 ﻿namespace Encryption
 {
-    partial class Menu
+    partial class Main
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -67,7 +67,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(278, 66);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Password Encryption ";
+            this.label1.Text = "Password  Encryption ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Create
@@ -78,7 +78,6 @@
             this.Create.Name = "Create";
             this.Create.Size = new System.Drawing.Size(278, 37);
             this.Create.TabIndex = 1;
-            this.Create.Text = "Create a new password";
             this.Create.UseVisualStyleBackColor = true;
             this.Create.Click += new System.EventHandler(this.Create_Click);
             // 
@@ -90,7 +89,6 @@
             this.Get.Name = "Get";
             this.Get.Size = new System.Drawing.Size(278, 37);
             this.Get.TabIndex = 2;
-            this.Get.Text = "Get the password";
             this.Get.UseVisualStyleBackColor = true;
             this.Get.Click += new System.EventHandler(this.Get_Click);
             // 
@@ -102,7 +100,6 @@
             this.Help.Name = "Help";
             this.Help.Size = new System.Drawing.Size(278, 37);
             this.Help.TabIndex = 3;
-            this.Help.Text = "Help";
             this.Help.UseVisualStyleBackColor = true;
             this.Help.Click += new System.EventHandler(this.Help_Click);
             // 
@@ -114,15 +111,15 @@
             this.button_settings.Name = "button_settings";
             this.button_settings.Size = new System.Drawing.Size(278, 40);
             this.button_settings.TabIndex = 4;
-            this.button_settings.Text = "Settings";
             this.button_settings.UseVisualStyleBackColor = true;
             this.button_settings.Click += new System.EventHandler(this.button_settings_Click);
             // 
-            // Menu
+            // Main
             // 
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "Menu";
+            this.Name = "Main";
+            this.Deactivate += new System.EventHandler(this.Main_Deactivate);
             this.Load += new System.EventHandler(this.Menu_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

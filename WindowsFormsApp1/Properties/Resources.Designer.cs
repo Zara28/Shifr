@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Encryption.Properties {
+namespace WindowsFormsApp1.Properties {
     using System;
     
     
@@ -57,6 +57,26 @@ namespace Encryption.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Create {
+            get {
+                object obj = ResourceManager.GetObject("Create", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Get {
+            get {
+                object obj = ResourceManager.GetObject("Get", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

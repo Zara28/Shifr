@@ -40,9 +40,8 @@
             this.label_choose.AutoSize = true;
             this.label_choose.Location = new System.Drawing.Point(12, 9);
             this.label_choose.Name = "label_choose";
-            this.label_choose.Size = new System.Drawing.Size(106, 13);
+            this.label_choose.Size = new System.Drawing.Size(0, 13);
             this.label_choose.TabIndex = 0;
-            this.label_choose.Text = "Choose site/account";
             // 
             // comboBox_site
             // 
@@ -64,9 +63,8 @@
             this.label_password.AutoSize = true;
             this.label_password.Location = new System.Drawing.Point(10, 88);
             this.label_password.Name = "label_password";
-            this.label_password.Size = new System.Drawing.Size(80, 13);
+            this.label_password.Size = new System.Drawing.Size(0, 13);
             this.label_password.TabIndex = 3;
-            this.label_password.Text = "Your password:";
             // 
             // button_get
             // 
@@ -74,7 +72,6 @@
             this.button_get.Name = "button_get";
             this.button_get.Size = new System.Drawing.Size(75, 23);
             this.button_get.TabIndex = 4;
-            this.button_get.Text = "Get";
             this.button_get.UseVisualStyleBackColor = true;
             this.button_get.Click += new System.EventHandler(this.button_get_Click);
             // 

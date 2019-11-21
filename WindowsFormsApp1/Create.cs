@@ -18,6 +18,30 @@ namespace Encryption
 
         private void Create_Load(object sender, EventArgs e)
         {
+            for (int i = 0; i < Config.names.Length; i++)
+            {
+                if (Config.names[i] == button_save.Name)
+                {
+                    button_save.Text = Config.names[i + 1];
+                }
+                if (Config.names[i] == labelhelpsite.Name)
+                {
+                    labelhelpsite.Text = Config.names[i + 1];
+                }
+                if (Config.names[i] == labelhelp_password.Name)
+                {
+                    labelhelp_password.Text = Config.names[i + 1];
+                }
+                if (Config.names[i] == Warning.Name)
+                {
+                    Warning.Text = Config.names[i + 1];
+                }
+                if (Config.names[i] == Warning2.Name)
+                {
+                    Warning2.Text = Config.names[i + 1];
+                }
+
+            }
         }
 
             private void button_save_Click(object sender, EventArgs e)
@@ -48,10 +72,20 @@ namespace Encryption
                 f.WriteLine(textBox_site.Text + ":" + Config.textshifr);
                 f.Close();
                 Config.textshifr = "";
-                MessageBox.Show("Password was saved!");
+                string message;
+                if(Config.rus_lang)
+                {
+                    message = "Ваш пароль успешно сохранен!";
+                }
+               else
+                {
+                    message = "Your password was saved!";
+                }
+                MessageBox.Show(message);
                 this.Close();
             }
             
         }
+
     }
 }

@@ -21,6 +21,25 @@ namespace Encryption
             comboBox_site.Items.Clear();
 
             Shifr.raskl();
+            Shifr.read();
+            for (int i = 0; i < Config.names.Length; i++)
+            {
+                if (Config.names[i] == label_choose.Name)
+                {
+
+                    label_choose.Text = Config.names[i + 1];
+                }
+                if (Config.names[i] == label_password.Name)
+                {
+                    label_password.Text = Config.names[i + 1];
+                }
+                if (Config.names[i] == button_get.Name)
+                {
+                    button_get.Text = Config.names[i + 1];
+                }
+            }
+
+
             String pas = File.ReadAllText("pas.txt");
             Config.vs = pas.Split(new char[] { ':', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0; i < Config.vs.Length; i++)
