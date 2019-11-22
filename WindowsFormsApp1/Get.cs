@@ -49,7 +49,6 @@ namespace Encryption
                     comboBox_site.Items.Add(Config.vs[i]);
                 }
             }
-            comboBox_site.SelectedIndex = 0;
         }
 
         private void button_get_Click(object sender, EventArgs e)
