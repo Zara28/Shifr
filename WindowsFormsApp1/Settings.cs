@@ -18,7 +18,12 @@ namespace Encryption
 
         private void button_clear_Click(object sender, EventArgs e)
         {
-            File.WriteAllText("pas.txt", "");
+           DialogResult  res =  MessageBox.Show(Config.message, Config.name, MessageBoxButtons.YesNo);
+               if(res == DialogResult.Yes)
+            {
+                File.WriteAllText("pas.txt", "");
+                MessageBox.Show("Ok!");
+            }
         }
 
         private void button_change_Click(object sender, EventArgs e)
@@ -52,7 +57,14 @@ namespace Encryption
                 {
                     labelname.Text = Config.names[i + 1];
                 }
-
+                if (Config.names[i] == "name")
+                {
+                    Config.name = Config.names[i + 1];
+                }
+                if (Config.names[i] == "message")
+                {
+                    Config.message = Config.names[i + 1];
+                }
 
             }
         }

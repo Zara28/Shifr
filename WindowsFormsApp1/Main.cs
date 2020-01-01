@@ -28,8 +28,15 @@ namespace Encryption
 
         private void Get_Click(object sender, EventArgs e)
         {
-            Get gt = new Get();
-            gt.ShowDialog();
+            try
+            {
+                Get gt = new Get();
+                gt.ShowDialog();
+            }
+            catch
+            {
+                MessageBox.Show(Config.error);
+            }
         }
         
         public void Menu_Load(object sender, EventArgs e)
@@ -55,6 +62,11 @@ namespace Encryption
                 {
                     Help.Text = Config.names[i + 1];
                 }
+                if (Config.names[i] == "error")
+                {
+                   Config.error = Config.names[i + 1];
+                }
+                
             }
         }
 
