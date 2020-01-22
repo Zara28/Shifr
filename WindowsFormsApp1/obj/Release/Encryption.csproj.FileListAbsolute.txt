@@ -28,3 +28,18 @@ C:\Users\Алексей\Desktop\Алена\UlGPU\Encryption passwords\WindowsFor
 C:\Users\Алексей\Desktop\Алена\UlGPU\Encryption passwords\WindowsFormsApp1\WindowsFormsApp1\obj\Release\Encryption.csproj.CopyComplete
 C:\Users\Алексей\Desktop\Алена\UlGPU\Encryption passwords\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.exe
 C:\Users\Алексей\Desktop\Алена\UlGPU\Encryption passwords\WindowsFormsApp1\WindowsFormsApp1\obj\Release\WindowsFormsApp1.pdb
+C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\bin\Release\WindowsFormsApp1.exe.config
+C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\bin\Release\WindowsFormsApp1.exe
+C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\bin\Release\WindowsFormsApp1.pdb
+C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\bin\Release\Microsoft.VisualStudio.DebuggerVisualizers.dll
+C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\obj\Release\Encryption.csprojAssemblyReference.cache
+C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\obj\Release\Encryption.Create.resources
+C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\obj\Release\Encryption.Get.resources
+C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\obj\Release\Encryption.Help.resources
+C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\obj\Release\Encryption.Main.resources
+C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\obj\Release\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\obj\Release\Encryption.Settings.resources
+C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\obj\Release\Encryption.csproj.GenerateResource.cache
+C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\obj\Release\Encryption.csproj.CopyComplete
+C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\obj\Release\WindowsFormsApp1.exe
+C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\obj\Release\WindowsFormsApp1.pdb

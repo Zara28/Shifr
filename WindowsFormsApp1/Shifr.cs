@@ -52,10 +52,19 @@ namespace Encryption
                     {
                         if (a[y] == alf[i])
                         {
-                            int c = Math.Abs(alf.Length - i - y-1);
-                            int d = alf.Length - c - y-1;
+                            int c = alf.Length - i - y-5;
+                            int d = alf.Length - c - y-5;
 
-                            Config.textshifr = Config.textshifr + alf[c];
+                            try
+                            {
+                                Config.textshifr = Config.textshifr + alf[c];
+                            }
+                            catch
+                            {
+                                c = alf.Length + c;
+                                Config.textshifr = Config.textshifr + alf[c];
+                            }
+                           
 
                         }
                     }
@@ -85,9 +94,18 @@ namespace Encryption
                     {
                         if (l[y] == Config.alf[i])
                         {
-                            int d = Config.alf.Length - i - y-1;
+                            int d = Config.alf.Length - i - y - 5;
 
-                            Config.textdeshifr = Config.textdeshifr + Config.alf[d];
+                            try
+                            {
+                                Config.textdeshifr = Config.textdeshifr + Config.alf[d];
+                            }
+                            catch
+                            {
+                                d = d - Config.alf.Length;
+                                Config.textdeshifr = Config.textdeshifr + Config.alf[d];
+                            }
+                            
                         }
                     }
 
