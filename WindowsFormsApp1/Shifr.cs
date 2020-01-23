@@ -42,10 +42,9 @@ namespace Encryption
         }
         public static void doit(string str, char [] alf)
         {
-            string [] st = str.Split(new char[] {'%'}, StringSplitOptions.RemoveEmptyEntries);
-            for( int l = 0; l <st.Length; l++)
-            {
-                char[] a = st[l].ToCharArray();
+           // string[] st = str.ToCharArray();//Split(new char[] {'%'}, StringSplitOptions.RemoveEmptyEntries);
+           
+                char[] a = str.ToCharArray();
                 for (int y = 0; y < a.Length; y++)
                 {
                     for (int i = 0; i < alf.Length; i++)
@@ -70,13 +69,12 @@ namespace Encryption
                     }
 
                 }
-                Config.textshifr = Config.textshifr + '%';
-            }
         }
         public static void translate(string site)
         {
             Config.textdeshifr = "";
             string text = "";
+            //char [] v = site.Split
             for (int i = 0; i < Config.vs.Length; i++)
             {
                 if (site == Config.vs[i])
@@ -84,11 +82,9 @@ namespace Encryption
                     text = Config.vs[i + 1];
                 }
             }
-            string[] h = text.Split(new char[] {'%'}, StringSplitOptions.RemoveEmptyEntries);
-            for(int m = 0; m<h.Length; m++)
-            {
-                char[] l = h[m].ToCharArray();
-                for (int y = 0; y < h[m].Length; y++)
+           
+                char[] l = text.ToCharArray();
+                for (int y = 0; y < l.Length; y++)
                 {
                     for (int i = 0; i < Config.alf.Length; i++)
                     {
@@ -102,7 +98,7 @@ namespace Encryption
                             }
                             catch
                             {
-                                d = d - Config.alf.Length;
+                                d = Config.alf.Length +d;
                                 Config.textdeshifr = Config.textdeshifr + Config.alf[d];
                             }
                             
@@ -110,7 +106,7 @@ namespace Encryption
                     }
 
                 }
-            }
+            
             
         }
     }

@@ -57,16 +57,9 @@ namespace Encryption
             else
             {
                 string stroka = textBox_password.Text;
-                char[] k = stroka.ToCharArray();
-                stroka = "";
-                for (int i = 0; i < k.Length; i++)
-                {
-                    if (i % 2 == 0)
-                    {
-                        stroka = stroka + "%" + k[i];
-                    }
-                    else stroka = stroka + k[i];
-                }
+               // char[] k = stroka.ToCharArray();
+               // stroka = "";
+                
                 Shifr.doit(stroka, Config.alf);
                 StreamWriter f = new StreamWriter("pas.txt", true);
                 f.WriteLine(textBox_site.Text + ":" + Config.textshifr);
