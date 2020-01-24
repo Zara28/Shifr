@@ -43,3 +43,4 @@ C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\obj\Debug\Encryption.cs
 C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\obj\Debug\Encryption.csproj.CopyComplete
 C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\obj\Debug\Encryption.Key.resources

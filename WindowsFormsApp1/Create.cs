@@ -62,7 +62,7 @@ namespace Encryption
                 
                 Shifr.doit(stroka, Config.alf);
                 StreamWriter f = new StreamWriter("pas.txt", true);
-                f.WriteLine(textBox_site.Text + ":" + Config.textshifr);
+                f.WriteLine(textBox_site.Text + ":" + Convert.ToString(Config.dif) + "+" + Config.textshifr);
                 f.Close();
                 Config.textshifr = "";
                 string message;

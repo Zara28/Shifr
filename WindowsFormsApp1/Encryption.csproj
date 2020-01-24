@@ -65,6 +65,12 @@
     <Compile Include="Help.Designer.cs">
       <DependentUpon>Help.cs</DependentUpon>
     </Compile>
+    <Compile Include="Key.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Key.designer.cs">
+      <DependentUpon>Key.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Help.resx">
       <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Key.resx">
+      <DependentUpon>Key.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

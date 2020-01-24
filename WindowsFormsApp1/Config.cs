@@ -19,6 +19,7 @@ namespace Encryption
         public static string error;
         public static string name;
         public static string message;
+        public static int dif;
 
     }
 }

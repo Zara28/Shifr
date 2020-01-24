@@ -51,8 +51,8 @@ namespace Encryption
                     {
                         if (a[y] == alf[i])
                         {
-                            int c = alf.Length - i - y-5;
-                            int d = alf.Length - c - y-5;
+                            int c = alf.Length - i - y-Config.dif;
+                            int d = alf.Length - c - y-Config.dif;
 
                             try
                             {
@@ -82,15 +82,16 @@ namespace Encryption
                     text = Config.vs[i + 1];
                 }
             }
-           
-                char[] l = text.ToCharArray();
+             string[] n = text.Split(new char[] { '+' }, StringSplitOptions.RemoveEmptyEntries);
+             Config.dif = Convert.ToInt32(n[0]);
+                char[] l = n[1].ToCharArray();
                 for (int y = 0; y < l.Length; y++)
                 {
                     for (int i = 0; i < Config.alf.Length; i++)
                     {
                         if (l[y] == Config.alf[i])
                         {
-                            int d = Config.alf.Length - i - y - 5;
+                            int d = Config.alf.Length - i - y - Config.dif;
 
                             try
                             {
