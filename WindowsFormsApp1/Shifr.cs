@@ -34,7 +34,11 @@ namespace Encryption
                 string[] f = File.ReadAllLines(lang);
                 for (int i = 0; i < f.Count(); i++)
                 {
-                    l = l + f[i];
+                    if(f[i]!= " ")
+                    {
+                         l = l + f[i];
+                    }
+                    
                 }
                 Config.alf = l.ToCharArray();
             

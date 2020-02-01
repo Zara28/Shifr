@@ -17,6 +17,7 @@ namespace Encryption
         public static bool rus_lang = true;
         public static string[] names;
         public static string error;
+        public static string It_is;
         public static string name;
         public static string message;
         public static int dif;

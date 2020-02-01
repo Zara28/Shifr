@@ -16,7 +16,12 @@ namespace Encryption
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Key());
+
+            Random rnd = new Random();
+            int value = rnd.Next(0, 9);
+            Config.dif = value;
+            Application.Run(new Main());
+
         }
     }
 }

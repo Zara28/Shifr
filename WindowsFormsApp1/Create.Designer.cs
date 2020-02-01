@@ -51,30 +51,30 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(327, 199);
+            this.panel1.Size = new System.Drawing.Size(409, 199);
             this.panel1.TabIndex = 0;
             // 
             // Warning2
             // 
             this.Warning2.AutoSize = true;
-            this.Warning2.Location = new System.Drawing.Point(13, 128);
+            this.Warning2.Location = new System.Drawing.Point(3, 130);
             this.Warning2.Name = "Warning2";
-            this.Warning2.Size = new System.Drawing.Size(35, 13);
+            this.Warning2.Size = new System.Drawing.Size(51, 20);
             this.Warning2.TabIndex = 4;
             this.Warning2.Text = "label1";
             // 
             // Warning
             // 
             this.Warning.AutoSize = true;
-            this.Warning.Location = new System.Drawing.Point(13, 105);
+            this.Warning.Location = new System.Drawing.Point(3, 99);
             this.Warning.Name = "Warning";
-            this.Warning.Size = new System.Drawing.Size(35, 13);
+            this.Warning.Size = new System.Drawing.Size(51, 20);
             this.Warning.TabIndex = 3;
             this.Warning.Text = "label1";
             // 
             // button_save
             // 
-            this.button_save.Location = new System.Drawing.Point(80, 148);
+            this.button_save.Location = new System.Drawing.Point(81, 164);
             this.button_save.Name = "button_save";
             this.button_save.Size = new System.Drawing.Size(75, 23);
             this.button_save.TabIndex = 2;
@@ -86,21 +86,21 @@
             this.labelhelp_password.AutoSize = true;
             this.labelhelp_password.Location = new System.Drawing.Point(48, 69);
             this.labelhelp_password.Name = "labelhelp_password";
-            this.labelhelp_password.Size = new System.Drawing.Size(0, 13);
+            this.labelhelp_password.Size = new System.Drawing.Size(0, 20);
             this.labelhelp_password.TabIndex = 0;
             // 
             // textBox_password
             // 
             this.textBox_password.Location = new System.Drawing.Point(107, 66);
             this.textBox_password.Name = "textBox_password";
-            this.textBox_password.Size = new System.Drawing.Size(100, 20);
+            this.textBox_password.Size = new System.Drawing.Size(100, 26);
             this.textBox_password.TabIndex = 1;
             // 
             // textBox_site
             // 
             this.textBox_site.Location = new System.Drawing.Point(107, 28);
             this.textBox_site.Name = "textBox_site";
-            this.textBox_site.Size = new System.Drawing.Size(100, 20);
+            this.textBox_site.Size = new System.Drawing.Size(100, 26);
             this.textBox_site.TabIndex = 1;
             // 
             // labelhelpsite
@@ -108,12 +108,12 @@
             this.labelhelpsite.AutoSize = true;
             this.labelhelpsite.Location = new System.Drawing.Point(12, 31);
             this.labelhelpsite.Name = "labelhelpsite";
-            this.labelhelpsite.Size = new System.Drawing.Size(0, 13);
+            this.labelhelpsite.Size = new System.Drawing.Size(0, 20);
             this.labelhelpsite.TabIndex = 0;
             // 
             // Create
             // 
-            this.ClientSize = new System.Drawing.Size(327, 199);
+            this.ClientSize = new System.Drawing.Size(409, 199);
             this.Controls.Add(this.panel1);
             this.Name = "Create";
             this.Text = "Create a new password";

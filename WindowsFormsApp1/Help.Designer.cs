@@ -30,7 +30,6 @@
         {
             this.tabControl = new System.Windows.Forms.TabControl();
             this.About = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBox_about = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Create_password = new System.Windows.Forms.TabPage();
@@ -39,12 +38,19 @@
             this.Get_password = new System.Windows.Forms.TabPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textBox_get = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.About.SuspendLayout();
             this.Create_password.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Get_password.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl
@@ -56,41 +62,30 @@
             this.tabControl.Location = new System.Drawing.Point(0, 0);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(477, 262);
+            this.tabControl.Size = new System.Drawing.Size(687, 336);
             this.tabControl.TabIndex = 0;
             // 
             // About
             // 
-            this.About.Controls.Add(this.label1);
-            this.About.Controls.Add(this.textBox_about);
+            this.About.Controls.Add(this.tableLayoutPanel1);
             this.About.Controls.Add(this.textBox1);
-            this.About.Location = new System.Drawing.Point(4, 22);
+            this.About.Location = new System.Drawing.Point(4, 29);
             this.About.Name = "About";
             this.About.Padding = new System.Windows.Forms.Padding(3);
-            this.About.Size = new System.Drawing.Size(469, 236);
+            this.About.Size = new System.Drawing.Size(679, 303);
             this.About.TabIndex = 0;
             this.About.Text = "About";
             this.About.UseVisualStyleBackColor = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Georgia", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(290, 34);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Encryption password";
-            // 
             // textBox_about
             // 
+            this.textBox_about.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_about.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.textBox_about.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_about.Location = new System.Drawing.Point(3, 40);
+            this.textBox_about.Location = new System.Drawing.Point(0, 49);
             this.textBox_about.Multiline = true;
             this.textBox_about.Name = "textBox_about";
-            this.textBox_about.Size = new System.Drawing.Size(463, 193);
+            this.textBox_about.Size = new System.Drawing.Size(355, 242);
             this.textBox_about.TabIndex = 1;
             // 
             // textBox1
@@ -100,17 +95,17 @@
             this.textBox1.Location = new System.Drawing.Point(3, 3);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(463, 230);
+            this.textBox1.Size = new System.Drawing.Size(673, 297);
             this.textBox1.TabIndex = 0;
             // 
             // Create_password
             // 
             this.Create_password.Controls.Add(this.textBox_create);
             this.Create_password.Controls.Add(this.pictureBox1);
-            this.Create_password.Location = new System.Drawing.Point(4, 22);
+            this.Create_password.Location = new System.Drawing.Point(4, 29);
             this.Create_password.Name = "Create_password";
             this.Create_password.Padding = new System.Windows.Forms.Padding(3);
-            this.Create_password.Size = new System.Drawing.Size(469, 236);
+            this.Create_password.Size = new System.Drawing.Size(679, 303);
             this.Create_password.TabIndex = 1;
             this.Create_password.Text = "Create";
             this.Create_password.UseVisualStyleBackColor = true;
@@ -118,23 +113,24 @@
             // textBox_create
             // 
             this.textBox_create.AllowDrop = true;
-            this.textBox_create.Dock = System.Windows.Forms.DockStyle.Left;
+            this.textBox_create.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox_create.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox_create.Location = new System.Drawing.Point(3, 3);
             this.textBox_create.Multiline = true;
             this.textBox_create.Name = "textBox_create";
             this.textBox_create.ReadOnly = true;
             this.textBox_create.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_create.Size = new System.Drawing.Size(178, 230);
+            this.textBox_create.Size = new System.Drawing.Size(356, 297);
             this.textBox_create.TabIndex = 4;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.Create;
-            this.pictureBox1.Location = new System.Drawing.Point(187, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(359, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(279, 230);
+            this.pictureBox1.Size = new System.Drawing.Size(317, 297);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -142,10 +138,10 @@
             // 
             this.Get_password.Controls.Add(this.pictureBox2);
             this.Get_password.Controls.Add(this.textBox_get);
-            this.Get_password.Location = new System.Drawing.Point(4, 22);
+            this.Get_password.Location = new System.Drawing.Point(4, 29);
             this.Get_password.Name = "Get_password";
             this.Get_password.Padding = new System.Windows.Forms.Padding(3);
-            this.Get_password.Size = new System.Drawing.Size(469, 236);
+            this.Get_password.Size = new System.Drawing.Size(679, 303);
             this.Get_password.TabIndex = 2;
             this.Get_password.Text = "Get";
             this.Get_password.UseVisualStyleBackColor = true;
@@ -154,9 +150,10 @@
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.Get;
-            this.pictureBox2.Location = new System.Drawing.Point(183, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(320, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(283, 230);
+            this.pictureBox2.Size = new System.Drawing.Size(356, 297);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
@@ -170,12 +167,57 @@
             this.textBox_get.Name = "textBox_get";
             this.textBox_get.ReadOnly = true;
             this.textBox_get.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox_get.Size = new System.Drawing.Size(174, 230);
+            this.textBox_get.Size = new System.Drawing.Size(348, 297);
             this.textBox_get.TabIndex = 5;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.74653F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.25347F));
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox4, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(673, 297);
+            this.tableLayoutPanel1.TabIndex = 3;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.textBox_about);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(355, 291);
+            this.panel1.TabIndex = 0;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox4.Location = new System.Drawing.Point(364, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(306, 291);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 1;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Georgia", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(3, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(408, 46);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Password Encryption ";
             // 
             // Help
             // 
-            this.ClientSize = new System.Drawing.Size(477, 262);
+            this.ClientSize = new System.Drawing.Size(687, 336);
             this.Controls.Add(this.tabControl);
             this.Name = "Help";
             this.Load += new System.EventHandler(this.Help_Load);
@@ -188,6 +230,10 @@
             this.Get_password.ResumeLayout(false);
             this.Get_password.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -204,6 +250,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox textBox_get;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

@@ -18,7 +18,14 @@ namespace Encryption
 
         private void Help_Load(object sender, EventArgs e)
         {
-            //string [] names = File.ReadAllLines("lang_rus");
+            if(Config.rus_lang)
+            {
+                pictureBox4.Image = new Bitmap("Resours\\Mainrus.jpg");
+            }
+            else
+            {
+                pictureBox4.Image = new Bitmap("Resours\\Maineng.jpg");
+            }
             Shifr.read();
 
             for(int i = 0; i<Config.names.Length; i++)

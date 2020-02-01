@@ -65,10 +65,18 @@ namespace Encryption
                 {
                     Config.message = Config.names[i + 1];
                 }
+                if (Config.names[i] == new_element.Name)
+                {
+                   new_element.Text = Config.names[i + 1];
+                }
 
             }
         }
 
-       
+        private void new_element_Click(object sender, EventArgs e)
+        {
+            New_element main = new New_element();
+            main.Show();
+        }
     }
 }
