@@ -61,7 +61,7 @@ namespace Encryption
                             try
                             {
                                 Config.textshifr = Config.textshifr + alf[c];
-                            }
+                        }
                             catch
                             {
                                 c = alf.Length + c;
