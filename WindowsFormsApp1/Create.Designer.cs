@@ -115,6 +115,7 @@
             // 
             this.ClientSize = new System.Drawing.Size(409, 199);
             this.Controls.Add(this.panel1);
+            this.MaximumSize = new System.Drawing.Size(450, 260);
             this.Name = "Create";
             this.Text = "Create a new password";
             this.Load += new System.EventHandler(this.Create_Load);

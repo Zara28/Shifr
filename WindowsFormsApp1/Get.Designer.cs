@@ -40,7 +40,7 @@
             this.label_choose.AutoSize = true;
             this.label_choose.Location = new System.Drawing.Point(12, 9);
             this.label_choose.Name = "label_choose";
-            this.label_choose.Size = new System.Drawing.Size(0, 13);
+            this.label_choose.Size = new System.Drawing.Size(0, 20);
             this.label_choose.TabIndex = 0;
             // 
             // comboBox_site
@@ -48,14 +48,14 @@
             this.comboBox_site.FormattingEnabled = true;
             this.comboBox_site.Location = new System.Drawing.Point(13, 40);
             this.comboBox_site.Name = "comboBox_site";
-            this.comboBox_site.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_site.Size = new System.Drawing.Size(121, 28);
             this.comboBox_site.TabIndex = 1;
             // 
             // textBox_password
             // 
             this.textBox_password.Location = new System.Drawing.Point(95, 85);
             this.textBox_password.Name = "textBox_password";
-            this.textBox_password.Size = new System.Drawing.Size(100, 20);
+            this.textBox_password.Size = new System.Drawing.Size(100, 26);
             this.textBox_password.TabIndex = 2;
             // 
             // label_password
@@ -63,7 +63,7 @@
             this.label_password.AutoSize = true;
             this.label_password.Location = new System.Drawing.Point(10, 88);
             this.label_password.Name = "label_password";
-            this.label_password.Size = new System.Drawing.Size(0, 13);
+            this.label_password.Size = new System.Drawing.Size(0, 20);
             this.label_password.TabIndex = 3;
             // 
             // button_get
@@ -83,6 +83,7 @@
             this.Controls.Add(this.textBox_password);
             this.Controls.Add(this.comboBox_site);
             this.Controls.Add(this.label_choose);
+            this.MaximumSize = new System.Drawing.Size(300, 250);
             this.Name = "Get";
             this.Text = "Get password";
             this.Load += new System.EventHandler(this.Get_Load);

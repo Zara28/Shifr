@@ -21,6 +21,7 @@ namespace Encryption
         public static string name;
         public static string message;
         public static int dif;
+        public static Byte b;
 
     }
 }

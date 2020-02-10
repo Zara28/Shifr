@@ -65,7 +65,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(278, 66);
+            this.label1.Size = new System.Drawing.Size(278, 87);
             this.label1.TabIndex = 0;
             this.label1.Text = "Password  Encryption ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -118,6 +118,7 @@
             // 
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MaximumSize = new System.Drawing.Size(306, 318);
             this.Name = "Main";
             this.Deactivate += new System.EventHandler(this.Main_Deactivate);
             this.Load += new System.EventHandler(this.Menu_Load);
