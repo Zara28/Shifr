@@ -59,24 +59,39 @@ namespace Encryption
                 string stroka = textBox_password.Text;
                // char[] k = stroka.ToCharArray();
                // stroka = "";
-                
-                Shifr.doit(stroka, Config.alf);
-                StreamWriter f = new StreamWriter("pas.txt", true);
-                f.WriteLine(textBox_site.Text + ":" + Convert.ToString(Config.dif) + "+" + Config.textshifr);
-                f.Close();
-                Config.textshifr = "";
-                string message;
-                if(Config.rus_lang)
+                if(stroka.Length>=25)
                 {
-                    message = "Ваш пароль успешно сохранен!";
+                    if (Config.rus_lang)
+                    {
+                       MessageBox.Show("Пароль должен содержать менее 25 символов");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Password should be less then 25 symbols");
+                    }
+                    textBox_password.Text = "";
                 }
-               else
+                else
                 {
-                    message = "Your password was saved!";
+                    Shifr.doit(stroka, Config.alf);
+                    StreamWriter f = new StreamWriter("pas.txt", true);
+                    f.WriteLine(textBox_site.Text + ":" + Convert.ToString(Config.dif) + "+" + Config.textshifr);
+                    f.Close();
+                    Config.textshifr = "";
+                    string message;
+                    if (Config.rus_lang)
+                    {
+                        message = "Ваш пароль успешно сохранен!";
+                    }
+                    else
+                    {
+                        message = "Your password was saved!";
+                    }
+                    MessageBox.Show(message);
+                    this.Close();
                 }
-                MessageBox.Show(message);
-                this.Close();
             }
+                
             
         }
 
