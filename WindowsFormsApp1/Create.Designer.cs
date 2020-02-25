@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Create));
             this.panel1 = new System.Windows.Forms.Panel();
             this.Warning2 = new System.Windows.Forms.Label();
             this.Warning = new System.Windows.Forms.Label();
@@ -36,11 +37,15 @@
             this.textBox_password = new System.Windows.Forms.TextBox();
             this.textBox_site = new System.Windows.Forms.TextBox();
             this.labelhelpsite = new System.Windows.Forms.Label();
+            this.label_name = new System.Windows.Forms.Label();
+            this.textBox_name = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.textBox_name);
+            this.panel1.Controls.Add(this.label_name);
             this.panel1.Controls.Add(this.Warning2);
             this.panel1.Controls.Add(this.Warning);
             this.panel1.Controls.Add(this.button_save);
@@ -51,13 +56,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(409, 199);
+            this.panel1.Size = new System.Drawing.Size(409, 260);
             this.panel1.TabIndex = 0;
             // 
             // Warning2
             // 
             this.Warning2.AutoSize = true;
-            this.Warning2.Location = new System.Drawing.Point(3, 130);
+            this.Warning2.Location = new System.Drawing.Point(3, 191);
             this.Warning2.Name = "Warning2";
             this.Warning2.Size = new System.Drawing.Size(51, 20);
             this.Warning2.TabIndex = 4;
@@ -66,7 +71,7 @@
             // Warning
             // 
             this.Warning.AutoSize = true;
-            this.Warning.Location = new System.Drawing.Point(3, 99);
+            this.Warning.Location = new System.Drawing.Point(3, 157);
             this.Warning.Name = "Warning";
             this.Warning.Size = new System.Drawing.Size(51, 20);
             this.Warning.TabIndex = 3;
@@ -74,7 +79,7 @@
             // 
             // button_save
             // 
-            this.button_save.Location = new System.Drawing.Point(81, 164);
+            this.button_save.Location = new System.Drawing.Point(81, 225);
             this.button_save.Name = "button_save";
             this.button_save.Size = new System.Drawing.Size(75, 23);
             this.button_save.TabIndex = 2;
@@ -84,21 +89,21 @@
             // labelhelp_password
             // 
             this.labelhelp_password.AutoSize = true;
-            this.labelhelp_password.Location = new System.Drawing.Point(48, 69);
+            this.labelhelp_password.Location = new System.Drawing.Point(12, 110);
             this.labelhelp_password.Name = "labelhelp_password";
             this.labelhelp_password.Size = new System.Drawing.Size(0, 20);
             this.labelhelp_password.TabIndex = 0;
             // 
             // textBox_password
             // 
-            this.textBox_password.Location = new System.Drawing.Point(107, 66);
+            this.textBox_password.Location = new System.Drawing.Point(107, 110);
             this.textBox_password.Name = "textBox_password";
             this.textBox_password.Size = new System.Drawing.Size(100, 26);
             this.textBox_password.TabIndex = 1;
             // 
             // textBox_site
             // 
-            this.textBox_site.Location = new System.Drawing.Point(107, 28);
+            this.textBox_site.Location = new System.Drawing.Point(107, 63);
             this.textBox_site.Name = "textBox_site";
             this.textBox_site.Size = new System.Drawing.Size(100, 26);
             this.textBox_site.TabIndex = 1;
@@ -106,17 +111,35 @@
             // labelhelpsite
             // 
             this.labelhelpsite.AutoSize = true;
-            this.labelhelpsite.Location = new System.Drawing.Point(12, 31);
+            this.labelhelpsite.Location = new System.Drawing.Point(12, 63);
             this.labelhelpsite.Name = "labelhelpsite";
             this.labelhelpsite.Size = new System.Drawing.Size(0, 20);
             this.labelhelpsite.TabIndex = 0;
             // 
+            // label_name
+            // 
+            this.label_name.AutoSize = true;
+            this.label_name.Location = new System.Drawing.Point(12, 22);
+            this.label_name.Name = "label_name";
+            this.label_name.Size = new System.Drawing.Size(51, 20);
+            this.label_name.TabIndex = 5;
+            this.label_name.Text = "label1";
+            // 
+            // textBox_name
+            // 
+            this.textBox_name.Location = new System.Drawing.Point(107, 15);
+            this.textBox_name.Name = "textBox_name";
+            this.textBox_name.Size = new System.Drawing.Size(100, 26);
+            this.textBox_name.TabIndex = 6;
+            // 
             // Create
             // 
-            this.ClientSize = new System.Drawing.Size(409, 199);
+            this.ClientSize = new System.Drawing.Size(409, 260);
             this.Controls.Add(this.panel1);
-            this.MaximumSize = new System.Drawing.Size(450, 260);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(450, 350);
             this.Name = "Create";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create a new password";
             this.Load += new System.EventHandler(this.Create_Load);
             this.panel1.ResumeLayout(false);
@@ -135,5 +158,7 @@
         private System.Windows.Forms.Label labelhelpsite;
         private System.Windows.Forms.Label Warning;
         private System.Windows.Forms.Label Warning2;
+        private System.Windows.Forms.TextBox textBox_name;
+        private System.Windows.Forms.Label label_name;
     }
 }

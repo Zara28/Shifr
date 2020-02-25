@@ -21,10 +21,14 @@ namespace Encryption
             if(Config.rus_lang)
             {
                 pictureBox4.Image = new Bitmap("Resours\\Mainrus.jpg");
+                pictureBox1.Image = new Bitmap("Resours\\Create_rus.jpg");
+                pictureBox2.Image = new Bitmap("Resours\\Get_rus.jpg");
             }
             else
             {
                 pictureBox4.Image = new Bitmap("Resours\\Maineng.jpg");
+                pictureBox1.Image = new Bitmap("Resours\\Create.jpg");
+                pictureBox2.Image = new Bitmap("Resours\\Get.jpg");
             }
             Shifr.read();
 
@@ -42,6 +46,18 @@ namespace Encryption
                 if (Config.names[i] == textBox_get.Name)
                 {
                     textBox_get.Text = Config.names[i + 1];
+                }
+                if (Config.names[i] == tabControl.TabPages[0].Name)
+                {
+                    tabControl.TabPages[0].Text = Config.names[i + 1];
+                }
+                if (Config.names[i] == tabControl.TabPages[1].Name)
+                {
+                    tabControl.TabPages[1].Text = Config.names[i + 1];
+                }
+                if (Config.names[i] == tabControl.TabPages[2].Name)
+                {
+                    tabControl.TabPages[2].Text = Config.names[i + 1];
                 }
             }
            

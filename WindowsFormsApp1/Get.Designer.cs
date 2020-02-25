@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Get));
             this.label_choose = new System.Windows.Forms.Label();
             this.comboBox_site = new System.Windows.Forms.ComboBox();
             this.textBox_password = new System.Windows.Forms.TextBox();
             this.label_password = new System.Windows.Forms.Label();
             this.button_get = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label_name = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label_choose
@@ -75,16 +78,36 @@
             this.button_get.UseVisualStyleBackColor = true;
             this.button_get.Click += new System.EventHandler(this.button_get_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(95, 118);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 26);
+            this.textBox1.TabIndex = 5;
+            // 
+            // label_name
+            // 
+            this.label_name.AutoSize = true;
+            this.label_name.Location = new System.Drawing.Point(16, 123);
+            this.label_name.Name = "label_name";
+            this.label_name.Size = new System.Drawing.Size(51, 20);
+            this.label_name.TabIndex = 6;
+            this.label_name.Text = "label1";
+            // 
             // Get
             // 
             this.ClientSize = new System.Drawing.Size(266, 175);
+            this.Controls.Add(this.label_name);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button_get);
             this.Controls.Add(this.label_password);
             this.Controls.Add(this.textBox_password);
             this.Controls.Add(this.comboBox_site);
             this.Controls.Add(this.label_choose);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(300, 250);
             this.Name = "Get";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Get password";
             this.Load += new System.EventHandler(this.Get_Load);
             this.ResumeLayout(false);
@@ -99,5 +122,7 @@
         private System.Windows.Forms.TextBox textBox_password;
         private System.Windows.Forms.Label label_password;
         private System.Windows.Forms.Button button_get;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label_name;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
             this.labelname = new System.Windows.Forms.Label();
             this.button_clear = new System.Windows.Forms.Button();
             this.button_change = new System.Windows.Forms.Button();
@@ -79,6 +80,7 @@
             this.Controls.Add(this.button_change);
             this.Controls.Add(this.button_clear);
             this.Controls.Add(this.labelname);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Settings";
             this.Load += new System.EventHandler(this.Settings_Load);
             this.ResumeLayout(false);

@@ -24,6 +24,10 @@ namespace Encryption
                 {
                     button_save.Text = Config.names[i + 1];
                 }
+                if (Config.names[i] == label_name.Name)
+                {
+                    label_name.Text = Config.names[i + 1];
+                }
                 if (Config.names[i] == labelhelpsite.Name)
                 {
                     labelhelpsite.Text = Config.names[i + 1];
@@ -40,42 +44,117 @@ namespace Encryption
                 {
                     Warning2.Text = Config.names[i + 1];
                 }
+                if (Config.names[i] == this.Name)
+                {
+                    this.Text = Config.names[i + 1];
+                }
 
+            }
+        }
+        private void check_length(string stroka)
+        {
+            if (textBox_site.Text == "")
+            {
+                if (Config.rus_lang)
+                {
+                    MessageBox.Show("Введите название аккаунта/адрес сайта");
+                }
+                else
+                {
+                    MessageBox.Show("Write name of your account/web-site");
+                }
+                Config.you_can = false;
+            }
+            else if(textBox_name.Text == "" && textBox_site.Text != "")
+            {
+                textBox_name.Text = "https://null";
+            }
+            else if (textBox_password.Text == "")
+            {
+                if (Config.rus_lang)
+                {
+                    MessageBox.Show("Введите пароль");
+                }
+                else
+                {
+                    MessageBox.Show("Write your password");
+                }
+                Config.you_can = false;
+            }
+            if (stroka.Length >= 25)
+            {
+                if (Config.rus_lang)
+                {
+                    MessageBox.Show("Пароль должен содержать менее 25 символов");
+                }
+                else
+                {
+                    MessageBox.Show("Password should be less then 25 symbols");
+                }
+                textBox_password.Text = "";
+                Config.you_can = false;
+            }
+            if (stroka.Contains(Convert.ToString('+')) || stroka.Contains(Convert.ToString(':')) || stroka.Contains(Convert.ToString('"'))|| stroka.Contains(Convert.ToString('|')))
+            {
+                if (Config.rus_lang)
+                {
+                    MessageBox.Show("Пароль не должен содержать символы '+', кавычки, '|' или ':'");
+                }
+                else
+                {
+                    MessageBox.Show("Password shouldn't contains '+', quotation marks, '|' or ':'");
+                }
+                textBox_password.Text = "";
+                Config.you_can = false;
+            }
+            Shifr.have_it(stroka, Config.alf);
+            if (Config.error_no_symbol)
+            {
+                if (Config.rus_lang)
+                {
+                    DialogResult res = MessageBox.Show("Одного из символов нет в алфавите, просмотреть все символы?", "Ошибка", MessageBoxButtons.YesNo);
+                    if (res == DialogResult.Yes)
+                    {
+                        New_element form = new New_element();
+                        form.Show();
+                    }
+
+                }
+                else
+                {
+                    DialogResult res = MessageBox.Show("Alphabet doesn't have one symbol of your password. Do you want see all symbols?", "Error", MessageBoxButtons.YesNo);
+                    if (res == DialogResult.Yes)
+                    {
+                        New_element form = new New_element();
+                        form.Show();
+                    }
+                }
+                textBox_password.Text = "";
+                Config.error_no_symbol = false;
+                Config.you_can = false;
             }
         }
 
             private void button_save_Click(object sender, EventArgs e)
         {
-            if(textBox_site.Text == "")
-            {
-                MessageBox.Show("Write name of your account/site");
-            }
-            if (textBox_password.Text == "")
-            {
-                MessageBox.Show("Write your password");
-            }
-            else
+            check_length(textBox_password.Text);
+           if(!Config.you_can)
             {
                 string stroka = textBox_password.Text;
-               // char[] k = stroka.ToCharArray();
-               // stroka = "";
-                if(stroka.Length>=25)
+                
+                    Shifr.doit(stroka, Config.alf);
+                    StreamWriter f = new StreamWriter("pas.txt", true);
+                string[] adress;
+                if(textBox_name.Text.Contains("https://"))
                 {
-                    if (Config.rus_lang)
-                    {
-                       MessageBox.Show("Пароль должен содержать менее 25 символов");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Password should be less then 25 symbols");
-                    }
-                    textBox_password.Text = "";
+                    adress = textBox_name.Text.Split(new string[] { "https://" }, StringSplitOptions.RemoveEmptyEntries);
+                    f.WriteLine(Environment.NewLine + textBox_site.Text + ":" + adress[0] + "|" + Convert.ToString(Config.dif) + "+" + Config.textshifr);
                 }
                 else
                 {
-                    Shifr.doit(stroka, Config.alf);
-                    StreamWriter f = new StreamWriter("pas.txt", true);
-                    f.WriteLine(textBox_site.Text + ":" + Convert.ToString(Config.dif) + "+" + Config.textshifr);
+                    f.WriteLine(Environment.NewLine + textBox_site.Text + ":" + textBox_name.Text + "|" + Convert.ToString(Config.dif) + "+" + Config.textshifr);
+                }
+                     
                     f.Close();
                     Config.textshifr = "";
                     string message;
@@ -89,7 +168,6 @@ namespace Encryption
                     }
                     MessageBox.Show(message);
                     this.Close();
-                }
             }
                 
             

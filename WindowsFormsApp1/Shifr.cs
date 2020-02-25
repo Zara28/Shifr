@@ -29,7 +29,7 @@ namespace Encryption
         }
         public static void raskl()
         {
-                string lang = "Resours/alfeng.txt";
+                string lang = "Resours\\alfeng.txt";
                 string l = "";
                 string[] f = File.ReadAllLines(lang);
                 for (int i = 0; i < f.Count(); i++)
@@ -44,6 +44,40 @@ namespace Encryption
             
             
         }
+
+        public static void have_it (string str, char[] alf)
+        {
+            char[] a = str.ToCharArray();
+            for (int y = 0; y < a.Length; y++)
+            {
+                for (int i = 0; i < alf.Length; i++)
+                {
+                    if (a[y] == alf[i])
+                    {
+                        a[y] = ' ';
+                    }
+
+
+                }
+
+
+            }
+            for (int y = 0; y < a.Length; y++)
+            {
+                for (int i = 0; i < alf.Length; i++)
+                {
+                    if (a[y] != ' ')
+                    {
+                        Config.error_no_symbol = true;
+                        break;
+                    }
+
+
+                }
+
+
+            }
+        }
         public static void doit(string str, char [] alf)
         {
            // string[] st = str.ToCharArray();//Split(new char[] {'%'}, StringSplitOptions.RemoveEmptyEntries);
@@ -53,37 +87,46 @@ namespace Encryption
                 {
                     for (int i = 0; i < alf.Length; i++)
                     {
+                    int d, c;
                         if (a[y] == alf[i])
                         {
-                            int c = alf.Length - i - y-Config.dif;
-                            int d = alf.Length - c - y-Config.dif;
 
+                             c = alf.Length - i - y-Config.dif;
+                       
+                             d = alf.Length - c - y - Config.dif;
+
+                            
                             try
                             {
                                 Config.textshifr = Config.textshifr + alf[c];
-                        }
+                            }
                             catch
                             {
                                 c = alf.Length + c;
                                 Config.textshifr = Config.textshifr + alf[c];
                             }
+                        
+                            
                            
 
                         }
-                    }
-
+                        
+                    
                 }
+                   
+
+               }
         }
         public static void translate(string site)
         {
             Config.textdeshifr = "";
             string text = "";
-            //char [] v = site.Split
             for (int i = 0; i < Config.vs.Length; i++)
             {
                 if (site == Config.vs[i])
                 {
-                    text = Config.vs[i + 1];
+                    Config.adress = Config.vs[i + 1];
+                    text = Config.vs[i + 2];
                 }
             }
              string[] n = text.Split(new char[] { '+' }, StringSplitOptions.RemoveEmptyEntries);

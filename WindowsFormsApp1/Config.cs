@@ -10,6 +10,8 @@ namespace Encryption
     {
         public static string textshifr;
         public static string textdeshifr;
+        public static string adress;
+
 
         public static char[] alf = new char[100];
         public static string[] vs = new string[100];
@@ -22,6 +24,8 @@ namespace Encryption
         public static string message;
         public static int dif;
         public static Byte b;
+        public static bool error_no_symbol;
 
+        public static bool you_can;
     }
 }

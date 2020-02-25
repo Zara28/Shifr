@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(New_element));
             this.labelname = new System.Windows.Forms.Label();
             this.button_show = new System.Windows.Forms.Button();
             this.button_add = new System.Windows.Forms.Button();
@@ -88,7 +89,9 @@
             this.Controls.Add(this.button_add);
             this.Controls.Add(this.button_show);
             this.Controls.Add(this.labelname);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "New_element";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.New_element_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -61,6 +61,19 @@ namespace Encryption
                     est = true;
                     break;
                 }
+                else if(elem == '+'|| elem == '"' || elem == ':' || elem == '|')
+                {
+                    if(Config.rus_lang)
+                    {
+                        MessageBox.Show("Это служебный символ");
+                    }
+                    else
+                    {
+                        MessageBox.Show("This is a service symbol");
+                    }
+                    est = true;
+                    break;
+                }
             }
             if(!est)
             {

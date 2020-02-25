@@ -29,6 +29,10 @@ namespace Encryption
 
                     label_choose.Text = Config.names[i + 1];
                 }
+                if (Config.names[i] == this.Name)
+                {
+                    this.Text = Config.names[i + 1];
+                }
                 if (Config.names[i] == label_password.Name)
                 {
                     label_password.Text = Config.names[i + 1];
@@ -37,23 +41,33 @@ namespace Encryption
                 {
                     button_get.Text = Config.names[i + 1];
                 }
+                if (Config.names[i] == label_name.Name)
+                {
+                    label_name.Text = Config.names[i + 1];
+                }
             }
 
 
             String pas = File.ReadAllText("pas.txt");
-            Config.vs = pas.Split(new char[] { ':', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+            Config.vs = pas.Split(new char[] { ':', '\r', '\n' , '|',}, StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0; i < Config.vs.Length; i++)
             {
-                if (i % 2 == 0)
+                if (i % 3 == 0)
                 {
                     comboBox_site.Items.Add(Config.vs[i]);
                 }
             }
+           
         }
 
         private void button_get_Click(object sender, EventArgs e)
         {
             Shifr.translate(comboBox_site.Text);
+            if(Config.adress!="null")
+            {
+                textBox1.Text = "https://" + Config.adress;
+            }
+            else textBox1.Text = "";
             textBox_password.Text = Config.textdeshifr;
             Config.textdeshifr = "";
         }
