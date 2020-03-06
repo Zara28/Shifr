@@ -60,7 +60,10 @@ namespace Encryption
                 {
                     est = true;
                     break;
+                    MessageBox.Show(Config.It_is);
                 }
+
+          
                 else if(elem == '+'|| elem == '"' || elem == ':' || elem == '|')
                 {
                     if(Config.rus_lang)
@@ -81,10 +84,6 @@ namespace Encryption
                 f.WriteLine("\n" + textBox1.Text);
                 MessageBox.Show("Ok!");
                 f.Close();
-            }
-            else
-            {
-                MessageBox.Show(Config.It_is);
             }
         }
     }

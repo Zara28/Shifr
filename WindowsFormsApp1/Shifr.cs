@@ -68,6 +68,7 @@ namespace Encryption
                 {
                     if (a[y] != ' ')
                     {
+                        Config.ot_symb = a[y] + " ";
                         Config.error_no_symbol = true;
                         break;
                     }

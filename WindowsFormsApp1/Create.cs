@@ -110,9 +110,13 @@ namespace Encryption
             Shifr.have_it(stroka, Config.alf);
             if (Config.error_no_symbol)
             {
+                textBox_password.Text = "";
+                Config.error_no_symbol = false;
+                Config.you_can = false;
+
                 if (Config.rus_lang)
                 {
-                    DialogResult res = MessageBox.Show("Одного из символов нет в алфавите, просмотреть все символы?", "Ошибка", MessageBoxButtons.YesNo);
+                    DialogResult res = MessageBox.Show("Символа "+Config.ot_symb+ "нет в алфавите, добавить его?", "Ошибка", MessageBoxButtons.YesNo);
                     if (res == DialogResult.Yes)
                     {
                         New_element form = new New_element();
@@ -122,23 +126,21 @@ namespace Encryption
                 }
                 else
                 {
-                    DialogResult res = MessageBox.Show("Alphabet doesn't have one symbol of your password. Do you want see all symbols?", "Error", MessageBoxButtons.YesNo);
+                    DialogResult res = MessageBox.Show("Alphabet doesn't have "+ Config.ot_symb+". Do you want add this symbol?", "Error", MessageBoxButtons.YesNo);
                     if (res == DialogResult.Yes)
                     {
                         New_element form = new New_element();
                         form.Show();
                     }
                 }
-                textBox_password.Text = "";
-                Config.error_no_symbol = false;
-                Config.you_can = false;
+                
             }
         }
 
             private void button_save_Click(object sender, EventArgs e)
         {
             check_length(textBox_password.Text);
-           if(!Config.you_can)
+           if(Config.you_can)
             {
                 string stroka = textBox_password.Text;
                 

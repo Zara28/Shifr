@@ -27,5 +27,6 @@ namespace Encryption
         public static bool error_no_symbol;
 
         public static bool you_can;
+        public static string ot_symb;
     }
 }
