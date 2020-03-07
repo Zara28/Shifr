@@ -171,6 +171,7 @@ namespace Encryption
               
 
             }
+            File.WriteAllText("pas.txt", "");
             Shifr.raskl();
             StreamWriter f = new StreamWriter("pas.txt", true);
             for (int i = 1; i <= l.Count; i++)
