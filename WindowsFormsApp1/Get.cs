@@ -62,7 +62,16 @@ namespace Encryption
 
         private void button_get_Click(object sender, EventArgs e)
         {
-            Shifr.translate(comboBox_site.Text);
+            string text = "";
+            for (int i = 0; i < Config.vs.Length; i++)
+            {
+                if (comboBox_site.Text == Config.vs[i])
+                {
+                    Config.adress = Config.vs[i + 1];
+                    text = Config.vs[i + 2];
+                }
+            }
+            Shifr.translate(text);
             if(Config.adress!="null")
             {
                 textBox1.Text = "https://" + Config.adress;

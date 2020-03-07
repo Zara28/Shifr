@@ -118,18 +118,10 @@ namespace Encryption
 
                }
         }
-        public static void translate(string site)
+        public static void translate(string text)
         {
             Config.textdeshifr = "";
-            string text = "";
-            for (int i = 0; i < Config.vs.Length; i++)
-            {
-                if (site == Config.vs[i])
-                {
-                    Config.adress = Config.vs[i + 1];
-                    text = Config.vs[i + 2];
-                }
-            }
+           
              string[] n = text.Split(new char[] { '+' }, StringSplitOptions.RemoveEmptyEntries);
              Config.dif = Convert.ToInt32(n[0]);
                 char[] l = n[1].ToCharArray();
@@ -157,6 +149,49 @@ namespace Encryption
                 }
             
             
+        }
+
+        public static void Overwhite()
+        {
+            String pas = File.ReadAllText("pas.txt");
+            Config.vs = pas.Split(new char[] { ':', '\r', '\n', '|', }, StringSplitOptions.RemoveEmptyEntries);
+           List<string>  l = new List <string>();
+            for (int i = 1; i <= Config.vs.Length; i++)
+            {
+                if (i % 3 == 0)
+                {
+                    Shifr.translate(Config.vs[i - 1]);
+                    l.Add(Config.textdeshifr);
+                    Config.textdeshifr = "";
+                }
+                else
+                {
+                    l.Add(Config.vs[i-1]);
+                }
+              
+
+            }
+            Shifr.raskl();
+            StreamWriter f = new StreamWriter("pas.txt", true);
+            for (int i = 1; i <= l.Count; i++)
+            {
+                if (i % 3 == 0)
+                {
+                    Shifr.doit(l[i-1], Config.alf);
+                    f.Write(Convert.ToString(Config.dif)+ "+" + Config.textshifr);
+                    Config.textshifr = "";
+                }
+                else if(i%2 == 0)
+                {
+                    f.Write(l[i-1] + "|");
+                }
+                else
+                {
+                    f.WriteLine(l[i-1] + ":");
+                }
+
+            }
+            f.Close();
         }
     }
 }

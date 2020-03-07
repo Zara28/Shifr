@@ -51,7 +51,6 @@ namespace Encryption
 
         private void button_add_Click(object sender, EventArgs e)
         {
-            Shifr.raskl();
             char elem = Convert.ToChar(textBox1.Text);
             bool est = false;
             for (int i = 0; i<Config.alf.Length; i++)
@@ -81,10 +80,13 @@ namespace Encryption
             if(!est)
             {
                 StreamWriter f = new StreamWriter("Resours\\alfeng.txt", true);
-                f.WriteLine("\n" + textBox1.Text);
+                f.WriteLine(textBox1.Text);
                 MessageBox.Show("Ok!");
                 f.Close();
+
+                Shifr.Overwhite();
             }
+
         }
     }
 }

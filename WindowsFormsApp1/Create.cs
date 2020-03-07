@@ -57,18 +57,15 @@ namespace Encryption
             {
                 if (Config.rus_lang)
                 {
-                    MessageBox.Show("Введите название аккаунта/адрес сайта");
+                    MessageBox.Show("Введите название аккаунта");
                 }
                 else
                 {
-                    MessageBox.Show("Write name of your account/web-site");
+                    MessageBox.Show("Write name of your account");
                 }
                 Config.you_can = false;
             }
-            else if(textBox_name.Text == "" && textBox_site.Text != "")
-            {
-                textBox_name.Text = "https://null";
-            }
+           
             else if (textBox_password.Text == "")
             {
                 if (Config.rus_lang)
@@ -140,8 +137,13 @@ namespace Encryption
             private void button_save_Click(object sender, EventArgs e)
         {
             check_length(textBox_password.Text);
-           if(Config.you_can)
+             
+            if (Config.you_can)
             {
+                if (textBox_name.Text == "")
+                {
+                    textBox_name.Text = "https://null";
+                }
                 string stroka = textBox_password.Text;
                 
                     Shifr.doit(stroka, Config.alf);
@@ -150,11 +152,11 @@ namespace Encryption
                 if(textBox_name.Text.Contains("https://"))
                 {
                     adress = textBox_name.Text.Split(new string[] { "https://" }, StringSplitOptions.RemoveEmptyEntries);
-                    f.WriteLine(Environment.NewLine + textBox_site.Text + ":" + adress[0] + "|" + Convert.ToString(Config.dif) + "+" + Config.textshifr);
+                    f.WriteLine(textBox_site.Text + ":" + adress[0] + "|" + Convert.ToString(Config.dif) + "+" + Config.textshifr);
                 }
                 else
                 {
-                    f.WriteLine(Environment.NewLine + textBox_site.Text + ":" + textBox_name.Text + "|" + Convert.ToString(Config.dif) + "+" + Config.textshifr);
+                    f.WriteLine(textBox_site.Text + ":" + textBox_name.Text + "|" + Convert.ToString(Config.dif) + "+" + Config.textshifr);
                 }
                      
                     f.Close();
