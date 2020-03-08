@@ -70,7 +70,6 @@ namespace Encryption
                     {
                         Config.ot_symb = a[y] + " ";
                         Config.error_no_symbol = true;
-                        break;
                     }
 
 
@@ -179,17 +178,10 @@ namespace Encryption
                 if (i % 3 == 0)
                 {
                     Shifr.doit(l[i-1], Config.alf);
-                    f.Write(Convert.ToString(Config.dif)+ "+" + Config.textshifr);
+                    f.Write(l[i - 3] + ":" + l[i - 2] + ":" + Convert.ToString(Config.dif)+ "+" + Config.textshifr + Environment.NewLine);
                     Config.textshifr = "";
                 }
-                else if(i%2 == 0)
-                {
-                    f.Write(l[i-1] + "|");
-                }
-                else
-                {
-                    f.WriteLine(l[i-1] + ":");
-                }
+               
 
             }
             f.Close();

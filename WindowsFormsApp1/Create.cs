@@ -88,7 +88,6 @@ namespace Encryption
                 {
                     MessageBox.Show("Password should be less then 25 symbols");
                 }
-                textBox_password.Text = "";
                 Config.you_can = false;
             }
             if (stroka.Contains(Convert.ToString('+')) || stroka.Contains(Convert.ToString(':')) || stroka.Contains(Convert.ToString('"'))|| stroka.Contains(Convert.ToString('|')))
@@ -101,22 +100,21 @@ namespace Encryption
                 {
                     MessageBox.Show("Password shouldn't contains '+', quotation marks, '|' or ':'");
                 }
-                textBox_password.Text = "";
                 Config.you_can = false;
             }
             Shifr.have_it(stroka, Config.alf);
             if (Config.error_no_symbol)
             {
-                textBox_password.Text = "";
                 Config.error_no_symbol = false;
                 Config.you_can = false;
 
                 if (Config.rus_lang)
                 {
-                    DialogResult res = MessageBox.Show("Символа "+Config.ot_symb+ "нет в алфавите, добавить его?", "Ошибка", MessageBoxButtons.YesNo);
+                    DialogResult res = MessageBox.Show("Символов "+Config.ot_symb+ "нет в алфавите, добавить его?", "Ошибка", MessageBoxButtons.YesNo);
                     if (res == DialogResult.Yes)
                     {
-                        New_element form = new New_element();
+
+                        New_element form = new New_element(Config.ot_symb);
                         form.Show();
                     }
 
@@ -126,7 +124,7 @@ namespace Encryption
                     DialogResult res = MessageBox.Show("Alphabet doesn't have "+ Config.ot_symb+". Do you want add this symbol?", "Error", MessageBoxButtons.YesNo);
                     if (res == DialogResult.Yes)
                     {
-                        New_element form = new New_element();
+                        New_element form = new New_element(Config.ot_symb);
                         form.Show();
                     }
                 }
@@ -173,7 +171,7 @@ namespace Encryption
                     MessageBox.Show(message);
                     this.Close();
             }
-                
+            Config.you_can = true;    
             
         }
 

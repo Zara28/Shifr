@@ -12,18 +12,30 @@ namespace Encryption
 {
     public partial class New_element : Form
     {
-        public New_element()
+        public New_element(string c)
         {
             InitializeComponent();
+            if(c!=null)
+            {
+                char[] y = c.ToCharArray();
+                textBox1.Text = Convert.ToString(y[0]);
+            }
+           
         }
 
         private void button_show_Click(object sender, EventArgs e)
         {
-            Process p = Process.Start("Resours\\alfeng.txt");
-
+            see();
         }
 
-      
+      private void see ()
+        {
+            textBox2.Text = "";
+            for (int i = 0; i < Config.alf.Length; i++)
+            {
+                textBox2.Text = textBox2.Text + Config.alf[i] + " ";
+            }
+        }
 
         private void New_element_Load(object sender, EventArgs e)
         {
@@ -51,42 +63,58 @@ namespace Encryption
 
         private void button_add_Click(object sender, EventArgs e)
         {
-            char elem = Convert.ToChar(textBox1.Text);
-            bool est = false;
-            for (int i = 0; i<Config.alf.Length; i++)
+            if (textBox1.TextLength == 1)
             {
-                if(elem == Config.alf[i])
+                char elem = Convert.ToChar(textBox1.Text);
+                bool est = false;
+                for (int i = 0; i < Config.alf.Length; i++)
                 {
-                    est = true;
-                    break;
-                    MessageBox.Show(Config.It_is);
+                    if (elem == Config.alf[i])
+                    {
+                        est = true;
+                        break;
+                        MessageBox.Show(Config.It_is);
+                    }
+
+
+                    else if (elem == '+' || elem == '"' || elem == ':' || elem == '|')
+                    {
+                        if (Config.rus_lang)
+                        {
+                            MessageBox.Show("Это служебный символ");
+                        }
+                        else
+                        {
+                            MessageBox.Show("This is a service symbol");
+                        }
+                        est = true;
+                        break;
+                    }
+                }
+                if (!est)
+                {
+                    StreamWriter f = new StreamWriter("Resours\\alfeng.txt", true);
+                    f.WriteLine(textBox1.Text);
+                    MessageBox.Show("Ok!");
+                    f.Close();
+
+                    Shifr.Overwhite();
+                    see();
                 }
 
-          
-                else if(elem == '+'|| elem == '"' || elem == ':' || elem == '|')
+            
+              }
+            else
+            {
+                if(Config.rus_lang)
                 {
-                    if(Config.rus_lang)
-                    {
-                        MessageBox.Show("Это служебный символ");
-                    }
-                    else
-                    {
-                        MessageBox.Show("This is a service symbol");
-                    }
-                    est = true;
-                    break;
+                    MessageBox.Show("Добавить можно только один символ");
+                }
+               else
+                {
+                    MessageBox.Show("You can add only one symbol");
                 }
             }
-            if(!est)
-            {
-                StreamWriter f = new StreamWriter("Resours\\alfeng.txt", true);
-                f.WriteLine(textBox1.Text);
-                MessageBox.Show("Ok!");
-                f.Close();
-
-                Shifr.Overwhite();
-            }
-
         }
     }
 }

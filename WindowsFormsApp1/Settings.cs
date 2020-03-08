@@ -75,7 +75,7 @@ namespace Encryption
 
         private void new_element_Click(object sender, EventArgs e)
         {
-            New_element main = new New_element();
+            New_element main = new New_element(null);
             main.Show();
         }
     }

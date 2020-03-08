@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Create));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox_name = new System.Windows.Forms.TextBox();
+            this.label_name = new System.Windows.Forms.Label();
             this.Warning2 = new System.Windows.Forms.Label();
             this.Warning = new System.Windows.Forms.Label();
             this.button_save = new System.Windows.Forms.Button();
@@ -37,8 +39,6 @@
             this.textBox_password = new System.Windows.Forms.TextBox();
             this.textBox_site = new System.Windows.Forms.TextBox();
             this.labelhelpsite = new System.Windows.Forms.Label();
-            this.label_name = new System.Windows.Forms.Label();
-            this.textBox_name = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +58,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(409, 260);
             this.panel1.TabIndex = 0;
+            // 
+            // textBox_name
+            // 
+            this.textBox_name.Location = new System.Drawing.Point(107, 15);
+            this.textBox_name.Name = "textBox_name";
+            this.textBox_name.Size = new System.Drawing.Size(100, 26);
+            this.textBox_name.TabIndex = 0;
+            // 
+            // label_name
+            // 
+            this.label_name.AutoSize = true;
+            this.label_name.Location = new System.Drawing.Point(12, 22);
+            this.label_name.Name = "label_name";
+            this.label_name.Size = new System.Drawing.Size(51, 20);
+            this.label_name.TabIndex = 5;
+            this.label_name.Text = "label1";
             // 
             // Warning2
             // 
@@ -82,7 +98,7 @@
             this.button_save.Location = new System.Drawing.Point(81, 225);
             this.button_save.Name = "button_save";
             this.button_save.Size = new System.Drawing.Size(75, 23);
-            this.button_save.TabIndex = 2;
+            this.button_save.TabIndex = 3;
             this.button_save.UseVisualStyleBackColor = true;
             this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
@@ -99,7 +115,7 @@
             this.textBox_password.Location = new System.Drawing.Point(107, 110);
             this.textBox_password.Name = "textBox_password";
             this.textBox_password.Size = new System.Drawing.Size(100, 26);
-            this.textBox_password.TabIndex = 1;
+            this.textBox_password.TabIndex = 2;
             // 
             // textBox_site
             // 
@@ -115,22 +131,6 @@
             this.labelhelpsite.Name = "labelhelpsite";
             this.labelhelpsite.Size = new System.Drawing.Size(0, 20);
             this.labelhelpsite.TabIndex = 0;
-            // 
-            // label_name
-            // 
-            this.label_name.AutoSize = true;
-            this.label_name.Location = new System.Drawing.Point(12, 22);
-            this.label_name.Name = "label_name";
-            this.label_name.Size = new System.Drawing.Size(51, 20);
-            this.label_name.TabIndex = 5;
-            this.label_name.Text = "label1";
-            // 
-            // textBox_name
-            // 
-            this.textBox_name.Location = new System.Drawing.Point(107, 15);
-            this.textBox_name.Name = "textBox_name";
-            this.textBox_name.Size = new System.Drawing.Size(100, 26);
-            this.textBox_name.TabIndex = 6;
             // 
             // Create
             // 
