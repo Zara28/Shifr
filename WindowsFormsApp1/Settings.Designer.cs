@@ -33,6 +33,7 @@
             this.button_clear = new System.Windows.Forms.Button();
             this.button_change = new System.Windows.Forms.Button();
             this.new_element = new System.Windows.Forms.Button();
+            this.button_edit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelname
@@ -66,22 +67,34 @@
             // 
             // new_element
             // 
-            this.new_element.Location = new System.Drawing.Point(26, 149);
+            this.new_element.Location = new System.Drawing.Point(26, 213);
             this.new_element.Name = "new_element";
             this.new_element.Size = new System.Drawing.Size(158, 53);
             this.new_element.TabIndex = 3;
             this.new_element.UseVisualStyleBackColor = true;
             this.new_element.Click += new System.EventHandler(this.new_element_Click);
             // 
+            // button_edit
+            // 
+            this.button_edit.Location = new System.Drawing.Point(26, 149);
+            this.button_edit.Name = "button_edit";
+            this.button_edit.Size = new System.Drawing.Size(158, 46);
+            this.button_edit.TabIndex = 4;
+            this.button_edit.UseVisualStyleBackColor = true;
+            this.button_edit.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Settings
             // 
-            this.ClientSize = new System.Drawing.Size(273, 227);
+            this.ClientSize = new System.Drawing.Size(273, 297);
+            this.Controls.Add(this.button_edit);
             this.Controls.Add(this.new_element);
             this.Controls.Add(this.button_change);
             this.Controls.Add(this.button_clear);
             this.Controls.Add(this.labelname);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Settings";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Settings_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -94,5 +107,6 @@
         private System.Windows.Forms.Button button_clear;
         private System.Windows.Forms.Button button_change;
         private System.Windows.Forms.Button new_element;
+        private System.Windows.Forms.Button button_edit;
     }
 }

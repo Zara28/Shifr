@@ -101,6 +101,7 @@
             this.Controls.Add(this.button_show);
             this.Controls.Add(this.labelname);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "New_element";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.New_element_Load);

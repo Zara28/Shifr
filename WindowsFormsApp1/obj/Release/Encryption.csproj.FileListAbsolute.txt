@@ -44,3 +44,4 @@ C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\obj\Release\Encryption.
 C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\obj\Release\WindowsFormsApp1.exe
 C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\obj\Release\WindowsFormsApp1.pdb
 C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\obj\Release\Encryption.New_element.resources
+C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\obj\Release\Encryption.Editing.resources

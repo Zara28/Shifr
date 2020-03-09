@@ -69,6 +69,10 @@ namespace Encryption
                 {
                    new_element.Text = Config.names[i + 1];
                 }
+                if (Config.names[i] == button_edit.Name)
+                {
+                    button_edit.Text = Config.names[i + 1];
+                }
 
             }
         }
@@ -77,6 +81,12 @@ namespace Encryption
         {
             New_element main = new New_element(null);
             main.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Editing form = new Editing();
+            form.Show();
         }
     }
 }

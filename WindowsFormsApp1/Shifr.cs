@@ -64,16 +64,12 @@ namespace Encryption
             }
             for (int y = 0; y < a.Length; y++)
             {
-                for (int i = 0; i < alf.Length; i++)
-                {
-                    if (a[y] != ' ')
+               if (a[y] != ' ')
                     {
-                        Config.ot_symb = a[y] + " ";
+                        Config.ot_symb = Config.ot_symb + a[y] + " ";
                         Config.error_no_symbol = true;
                     }
 
-
-                }
 
 
             }

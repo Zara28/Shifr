@@ -51,9 +51,9 @@ namespace Encryption
 
             }
         }
-        private void check_length(string stroka)
+        public static void check_length(string stroka, string acc)
         {
-            if (textBox_site.Text == "")
+            if (acc == "")
             {
                 if (Config.rus_lang)
                 {
@@ -66,7 +66,7 @@ namespace Encryption
                 Config.you_can = false;
             }
            
-            else if (textBox_password.Text == "")
+            else if (stroka == "")
             {
                 if (Config.rus_lang)
                 {
@@ -110,7 +110,7 @@ namespace Encryption
 
                 if (Config.rus_lang)
                 {
-                    DialogResult res = MessageBox.Show("Символов "+Config.ot_symb+ "нет в алфавите, добавить его?", "Ошибка", MessageBoxButtons.YesNo);
+                    DialogResult res = MessageBox.Show("Символов "+Config.ot_symb+ "нет в алфавите, добавить их?", "Ошибка", MessageBoxButtons.YesNo);
                     if (res == DialogResult.Yes)
                     {
 
@@ -121,7 +121,7 @@ namespace Encryption
                 }
                 else
                 {
-                    DialogResult res = MessageBox.Show("Alphabet doesn't have "+ Config.ot_symb+". Do you want add this symbol?", "Error", MessageBoxButtons.YesNo);
+                    DialogResult res = MessageBox.Show("Alphabet doesn't have "+ Config.ot_symb+". Do you want add this symbols?", "Error", MessageBoxButtons.YesNo);
                     if (res == DialogResult.Yes)
                     {
                         New_element form = new New_element(Config.ot_symb);
@@ -134,7 +134,7 @@ namespace Encryption
 
             private void button_save_Click(object sender, EventArgs e)
         {
-            check_length(textBox_password.Text);
+            check_length(textBox_password.Text, textBox_site.Text);
              
             if (Config.you_can)
             {
@@ -156,8 +156,7 @@ namespace Encryption
                 {
                     f.WriteLine(textBox_site.Text + ":" + textBox_name.Text + "|" + Convert.ToString(Config.dif) + "+" + Config.textshifr);
                 }
-                     
-                    f.Close();
+                f.Close();
                     Config.textshifr = "";
                     string message;
                     if (Config.rus_lang)
@@ -169,7 +168,6 @@ namespace Encryption
                         message = "Your password was saved!";
                     }
                     MessageBox.Show(message);
-                    this.Close();
             }
             Config.you_can = true;    
             
