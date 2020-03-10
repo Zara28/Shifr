@@ -32,7 +32,6 @@ C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\bin\Debug\WindowsFormsA
 C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
 C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
 C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\bin\Debug\Microsoft.VisualStudio.DebuggerVisualizers.dll
-C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\obj\Debug\Encryption.csprojAssemblyReference.cache
 C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\obj\Debug\Encryption.Create.resources
 C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\obj\Debug\Encryption.Get.resources
 C:\Users\Acer\Desktop\masterIT\masterIT\WindowsFormsApp1\obj\Debug\Encryption.Help.resources

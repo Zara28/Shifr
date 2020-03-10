@@ -40,10 +40,7 @@ namespace Encryption
                 {
                     Warning.Text = Config.names[i + 1];
                 }
-                if (Config.names[i] == Warning2.Name)
-                {
-                    Warning2.Text = Config.names[i + 1];
-                }
+              
                 if (Config.names[i] == this.Name)
                 {
                     this.Text = Config.names[i + 1];
@@ -110,10 +107,9 @@ namespace Encryption
 
                 if (Config.rus_lang)
                 {
-                    DialogResult res = MessageBox.Show("Символов "+Config.ot_symb+ "нет в алфавите, добавить их?", "Ошибка", MessageBoxButtons.YesNo);
+                    DialogResult res = MessageBox.Show("Символов "+Config.ot_symb+ " нет в алфавите, добавить их?", "Ошибка", MessageBoxButtons.YesNo);
                     if (res == DialogResult.Yes)
                     {
-
                         New_element form = new New_element(Config.ot_symb);
                         form.Show();
                     }
@@ -169,8 +165,8 @@ namespace Encryption
                     }
                     MessageBox.Show(message);
             }
-            Config.you_can = true;    
-            
+            Config.you_can = true;
+            Create_Load(sender, e);
         }
 
     }

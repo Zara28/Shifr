@@ -26,7 +26,7 @@ namespace Encryption
             {
                 if (Config.names[i] == label_choose.Name)
                 {
-
+                   // label_choose.Text = " ";
                     label_choose.Text = Config.names[i + 1];
                 }
                 if (Config.names[i] == this.Name)

@@ -64,11 +64,19 @@ namespace Encryption
             }
             for (int y = 0; y < a.Length; y++)
             {
-               if (a[y] != ' ')
+                for (int u = 0; u < a.Length; u++)
+                {
+                    if (a[u] != ' ' && a[u] != '+' && a[u] != '|' && a[u] != '"' && a[u] != ':' && a[u]!=a[y])
                     {
-                        Config.ot_symb = Config.ot_symb + a[y] + " ";
-                        Config.error_no_symbol = true;
+                        if(Config.ot_symb == null || Config.ot_symb.Contains(a[u]) == false)
+                        {
+                            Config.ot_symb = Config.ot_symb + a[u];
+                            Config.error_no_symbol = true;
+                        }
+                        
                     }
+                }
+              
 
 
 

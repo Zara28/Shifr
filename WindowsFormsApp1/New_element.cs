@@ -18,7 +18,11 @@ namespace Encryption
             if(c!=null)
             {
                 char[] y = c.ToCharArray();
-                textBox1.Text = Convert.ToString(y[0]);
+                for(int i=0; i<y.Length; i++)
+                {
+                    textBox1.Text = textBox1.Text  + Convert.ToString(y[i]);
+                }
+               
             }
            
         }
@@ -63,21 +67,23 @@ namespace Encryption
 
         private void button_add_Click(object sender, EventArgs e)
         {
-            if (textBox1.TextLength == 1)
-            {
-                char elem = Convert.ToChar(textBox1.Text);
+            
+                char [] elem = textBox1.Text.ToCharArray();
                 bool est = false;
                 for (int i = 0; i < Config.alf.Length; i++)
                 {
-                    if (elem == Config.alf[i])
+                    for(int u = 0; u<elem.Length; u++)
+                {
+                    if (elem[u] == Config.alf[i])
                     {
                         est = true;
-                        break;
                         MessageBox.Show(Config.It_is);
+                        break;
+
                     }
+                    
 
-
-                    else if (elem == '+' || elem == '"' || elem == ':' || elem == '|')
+                    else if (elem[u] == '+' || elem[u] == '"' || elem[u] == ':' || elem[u] == '|')
                     {
                         if (Config.rus_lang)
                         {
@@ -91,30 +97,28 @@ namespace Encryption
                         break;
                     }
                 }
+                    
+                }
                 if (!est)
                 {
                     StreamWriter f = new StreamWriter("Resours\\alfeng.txt", true);
-                    f.WriteLine(textBox1.Text);
+                for(int i = 0; i< elem.Length; i++)
+                    {
+                         f.WriteLine(elem[i]);
+                    }
+                   
                     MessageBox.Show("Ok!");
                     f.Close();
 
                     Shifr.Overwhite();
                     see();
+                    Shifr.raskl();
+
+                    New_element_Load(sender, e);
                 }
 
             
-              }
-            else
-            {
-                if(Config.rus_lang)
-                {
-                    MessageBox.Show("Добавить можно только один символ");
-                }
-               else
-                {
-                    MessageBox.Show("You can add only one symbol");
-                }
-            }
+           
         }
     }
 }

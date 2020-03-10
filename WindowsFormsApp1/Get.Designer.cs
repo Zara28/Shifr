@@ -43,6 +43,8 @@
             this.label_choose.AutoSize = true;
             this.label_choose.Location = new System.Drawing.Point(12, 9);
             this.label_choose.Name = "label_choose";
+            this.label_choose.Text = "label_choose";
+
             this.label_choose.Size = new System.Drawing.Size(0, 20);
             this.label_choose.TabIndex = 0;
             // 
@@ -93,6 +95,7 @@
             this.label_name.Size = new System.Drawing.Size(51, 20);
             this.label_name.TabIndex = 6;
             this.label_name.Text = "label1";
+           
             // 
             // Get
             // 

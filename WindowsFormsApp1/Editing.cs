@@ -42,6 +42,10 @@ namespace Encryption
                 {
                     label_choose.Text = Config.names[i + 1];
                 }
+                if (Config.names[i] == button_delete.Name)
+                {
+                    button_delete.Text = Config.names[i + 1];
+                }
                 if (Config.names[i] == this.Name)
                 {
                     this.Text = Config.names[i + 1];
@@ -89,6 +93,8 @@ namespace Encryption
                 f.Close();
             }
             Config.you_can = true;
+
+            Editing_Load(sender, e);
         }
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
@@ -101,6 +107,33 @@ namespace Encryption
                     label1.Text = Config.textdeshifr;
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            File.WriteAllText("pas.txt", "");
+            StreamWriter f = new StreamWriter("pas.txt", true);
+            for (int i = 0; i < Config.vs.Length; i++)
+            {
+
+                if (comboBox1.Text == Config.vs[i])
+                {
+                    Config.vs[i] = "";
+                    Config.vs[i+1] = "";
+                    Config.vs[i+2] = "";
+                    f.WriteLine(Config.vs[i]+ Config.vs[i + 1] + Config.vs[i+2]);
+                    MessageBox.Show("Ok");
+                }
+                else
+                {
+                    if (i % 3 == 0)
+                    {
+                        f.WriteLine(Config.vs[i] + ":" + Config.vs[i + 1] + "|" + Config.vs[i + 2]);
+                    }
+                }
+            }
+            f.Close();
+            Editing_Load(sender, e);
         }
     }
 }

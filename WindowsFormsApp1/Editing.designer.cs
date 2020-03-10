@@ -36,6 +36,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button_edit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button_delete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelname
@@ -98,9 +99,19 @@
             this.label1.Size = new System.Drawing.Size(0, 20);
             this.label1.TabIndex = 7;
             // 
+            // button_delete
+            // 
+            this.button_delete.Location = new System.Drawing.Point(154, 133);
+            this.button_delete.Name = "button_delete";
+            this.button_delete.Size = new System.Drawing.Size(75, 23);
+            this.button_delete.TabIndex = 8;
+            this.button_delete.UseVisualStyleBackColor = true;
+            this.button_delete.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Editing
             // 
             this.ClientSize = new System.Drawing.Size(346, 173);
+            this.Controls.Add(this.button_delete);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button_edit);
             this.Controls.Add(this.textBox2);
@@ -127,5 +138,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button_edit;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button_delete;
     }
 }

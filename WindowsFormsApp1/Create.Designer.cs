@@ -32,22 +32,20 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox_name = new System.Windows.Forms.TextBox();
             this.label_name = new System.Windows.Forms.Label();
-            this.Warning2 = new System.Windows.Forms.Label();
-            this.Warning = new System.Windows.Forms.Label();
             this.button_save = new System.Windows.Forms.Button();
             this.labelhelp_password = new System.Windows.Forms.Label();
             this.textBox_password = new System.Windows.Forms.TextBox();
             this.textBox_site = new System.Windows.Forms.TextBox();
             this.labelhelpsite = new System.Windows.Forms.Label();
+            this.Warning = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.Warning);
             this.panel1.Controls.Add(this.textBox_name);
             this.panel1.Controls.Add(this.label_name);
-            this.panel1.Controls.Add(this.Warning2);
-            this.panel1.Controls.Add(this.Warning);
             this.panel1.Controls.Add(this.button_save);
             this.panel1.Controls.Add(this.labelhelp_password);
             this.panel1.Controls.Add(this.textBox_password);
@@ -74,24 +72,6 @@
             this.label_name.Size = new System.Drawing.Size(51, 20);
             this.label_name.TabIndex = 5;
             this.label_name.Text = "label1";
-            // 
-            // Warning2
-            // 
-            this.Warning2.AutoSize = true;
-            this.Warning2.Location = new System.Drawing.Point(3, 191);
-            this.Warning2.Name = "Warning2";
-            this.Warning2.Size = new System.Drawing.Size(51, 20);
-            this.Warning2.TabIndex = 4;
-            this.Warning2.Text = "label1";
-            // 
-            // Warning
-            // 
-            this.Warning.AutoSize = true;
-            this.Warning.Location = new System.Drawing.Point(3, 157);
-            this.Warning.Name = "Warning";
-            this.Warning.Size = new System.Drawing.Size(51, 20);
-            this.Warning.TabIndex = 3;
-            this.Warning.Text = "label1";
             // 
             // button_save
             // 
@@ -132,6 +112,15 @@
             this.labelhelpsite.Size = new System.Drawing.Size(0, 20);
             this.labelhelpsite.TabIndex = 0;
             // 
+            // Warning
+            // 
+            this.Warning.Location = new System.Drawing.Point(13, 154);
+            this.Warning.Multiline = true;
+            this.Warning.Name = "Warning";
+            this.Warning.ReadOnly = true;
+            this.Warning.Size = new System.Drawing.Size(384, 65);
+            this.Warning.TabIndex = 6;
+            // 
             // Create
             // 
             this.ClientSize = new System.Drawing.Size(409, 260);
@@ -157,9 +146,8 @@
         private System.Windows.Forms.TextBox textBox_password;
         private System.Windows.Forms.TextBox textBox_site;
         private System.Windows.Forms.Label labelhelpsite;
-        private System.Windows.Forms.Label Warning;
-        private System.Windows.Forms.Label Warning2;
         private System.Windows.Forms.TextBox textBox_name;
         private System.Windows.Forms.Label label_name;
+        private System.Windows.Forms.TextBox Warning;
     }
 }
