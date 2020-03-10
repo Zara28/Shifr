@@ -18,7 +18,8 @@ namespace Encryption
 
         private void Help_Load(object sender, EventArgs e)
         {
-            if(Config.rus_lang)
+
+            if (Config.rus_lang)
             {
                 pictureBox4.Image = new Bitmap("Resours\\Mainrus.jpg");
                 pictureBox1.Image = new Bitmap("Resours\\Create_rus.jpg");

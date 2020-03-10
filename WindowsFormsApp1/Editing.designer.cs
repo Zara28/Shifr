@@ -54,9 +54,8 @@
             this.label_choose.AutoSize = true;
             this.label_choose.Location = new System.Drawing.Point(13, 13);
             this.label_choose.Name = "label_choose";
-            this.label_choose.Size = new System.Drawing.Size(51, 20);
+            this.label_choose.Size = new System.Drawing.Size(0, 20);
             this.label_choose.TabIndex = 1;
-            this.label_choose.Text = "label1";
             // 
             // comboBox1
             // 
@@ -72,9 +71,8 @@
             this.label_edit.AutoSize = true;
             this.label_edit.Location = new System.Drawing.Point(12, 90);
             this.label_edit.Name = "label_edit";
-            this.label_edit.Size = new System.Drawing.Size(51, 20);
+            this.label_edit.Size = new System.Drawing.Size(0, 20);
             this.label_edit.TabIndex = 4;
-            this.label_edit.Text = "label2";
             // 
             // textBox2
             // 
@@ -89,7 +87,6 @@
             this.button_edit.Name = "button_edit";
             this.button_edit.Size = new System.Drawing.Size(75, 27);
             this.button_edit.TabIndex = 6;
-            this.button_edit.Text = "button1";
             this.button_edit.UseVisualStyleBackColor = true;
             this.button_edit.Click += new System.EventHandler(this.button_edit_Click);
             // 
@@ -98,9 +95,8 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(170, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.Size = new System.Drawing.Size(0, 20);
             this.label1.TabIndex = 7;
-            this.label1.Text = "label1";
             // 
             // Editing
             // 

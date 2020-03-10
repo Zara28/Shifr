@@ -43,6 +43,7 @@ namespace Encryption
 
         private void Settings_Load(object sender, EventArgs e)
         {
+
             for (int i = 0; i < Config.names.Length; i++)
             {
                 if (Config.names[i] == button_change.Name)
@@ -88,5 +89,6 @@ namespace Encryption
             Editing form = new Editing();
             form.Show();
         }
+        
     }
 }

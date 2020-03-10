@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Drawing;
 using System.Threading.Tasks;
 
 namespace Encryption
@@ -16,7 +17,8 @@ namespace Encryption
         public static char[] alf = new char[100];
         public static string[] vs = new string[100];
 
-        public static bool rus_lang = true;
+        public static bool isit = false;
+        public static bool rus_lang ;
         public static string[] names;
         public static string error;
         public static string It_is;
@@ -28,5 +30,6 @@ namespace Encryption
 
         public static bool you_can = true;
         public static string ot_symb;
+
     }
 }

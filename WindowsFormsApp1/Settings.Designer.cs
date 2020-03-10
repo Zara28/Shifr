@@ -34,6 +34,7 @@
             this.button_change = new System.Windows.Forms.Button();
             this.new_element = new System.Windows.Forms.Button();
             this.button_edit = new System.Windows.Forms.Button();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.SuspendLayout();
             // 
             // labelname
@@ -49,43 +50,43 @@
             // 
             // button_clear
             // 
-            this.button_clear.Location = new System.Drawing.Point(26, 66);
+            this.button_clear.Location = new System.Drawing.Point(26, 67);
             this.button_clear.Name = "button_clear";
-            this.button_clear.Size = new System.Drawing.Size(158, 23);
+            this.button_clear.Size = new System.Drawing.Size(158, 42);
             this.button_clear.TabIndex = 1;
             this.button_clear.UseVisualStyleBackColor = true;
             this.button_clear.Click += new System.EventHandler(this.button_clear_Click);
             // 
             // button_change
             // 
-            this.button_change.Location = new System.Drawing.Point(26, 109);
+            this.button_change.Location = new System.Drawing.Point(26, 115);
             this.button_change.Name = "button_change";
-            this.button_change.Size = new System.Drawing.Size(158, 23);
+            this.button_change.Size = new System.Drawing.Size(158, 39);
             this.button_change.TabIndex = 2;
             this.button_change.UseVisualStyleBackColor = true;
             this.button_change.Click += new System.EventHandler(this.button_change_Click);
             // 
             // new_element
             // 
-            this.new_element.Location = new System.Drawing.Point(26, 213);
+            this.new_element.Location = new System.Drawing.Point(26, 221);
             this.new_element.Name = "new_element";
-            this.new_element.Size = new System.Drawing.Size(158, 53);
+            this.new_element.Size = new System.Drawing.Size(158, 55);
             this.new_element.TabIndex = 3;
             this.new_element.UseVisualStyleBackColor = true;
             this.new_element.Click += new System.EventHandler(this.new_element_Click);
             // 
             // button_edit
             // 
-            this.button_edit.Location = new System.Drawing.Point(26, 149);
+            this.button_edit.Location = new System.Drawing.Point(26, 160);
             this.button_edit.Name = "button_edit";
-            this.button_edit.Size = new System.Drawing.Size(158, 46);
+            this.button_edit.Size = new System.Drawing.Size(158, 44);
             this.button_edit.TabIndex = 4;
             this.button_edit.UseVisualStyleBackColor = true;
             this.button_edit.Click += new System.EventHandler(this.button1_Click);
             // 
             // Settings
             // 
-            this.ClientSize = new System.Drawing.Size(273, 297);
+            this.ClientSize = new System.Drawing.Size(219, 286);
             this.Controls.Add(this.button_edit);
             this.Controls.Add(this.new_element);
             this.Controls.Add(this.button_change);
@@ -108,5 +109,6 @@
         private System.Windows.Forms.Button button_change;
         private System.Windows.Forms.Button new_element;
         private System.Windows.Forms.Button button_edit;
+        private System.Windows.Forms.FontDialog fontDialog1;
     }
 }
