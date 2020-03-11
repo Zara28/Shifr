@@ -34,7 +34,7 @@ namespace Encryption
                 string[] f = File.ReadAllLines(lang);
                 for (int i = 0; i < f.Count(); i++)
                 {
-                    if(f[i]!= " ")
+                    if(f[i]!= " " && f[i]!= "\n")
                     {
                          l = l + f[i];
                     }

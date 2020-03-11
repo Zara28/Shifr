@@ -49,6 +49,10 @@ namespace Encryption
                 {
                     button_add.Text = Config.names[i + 1];
                 }
+                if (Config.names[i] == button_delete.Name)
+                {
+                    button_delete.Text = Config.names[i + 1];
+                }
                 if (Config.names[i] == button_show.Name)
                 {
                     button_show.Text = Config.names[i + 1];
@@ -119,6 +123,71 @@ namespace Encryption
 
             
            
+        }
+
+        private void button_delete_Click(object sender, EventArgs e)
+        {
+
+            bool est = false;
+            char[] elem = textBox1.Text.ToCharArray();
+            for(int u = 0; u < elem.Length; u++)
+            {
+                for(int i = 0; i < Config.alf.Length; i++)
+                {
+                    if (elem[u] == Config.alf[i])
+                    {
+                        Config.alf[i] = '\n';
+                        est = true;
+                    }
+
+                    
+
+                    else if (elem[u] == '+' || elem[u] == '"' || elem[u] == ':' || elem[u] == '|')
+                    {
+                        if (Config.rus_lang)
+                        {
+                            MessageBox.Show("Это служебный символ");
+                        }
+                        else
+                        {
+                            MessageBox.Show("This is a service symbol");
+                        }
+                        est = false;
+                        break;
+                    }
+                    
+                }
+                if(est)
+                {
+                    File.WriteAllText("Resours\\alfeng.txt", "");
+                    StreamWriter f = new StreamWriter("Resours\\alfeng.txt", true);
+                    for (int y = 0; y < Config.alf.Length; y++)
+                    {
+                        f.WriteLine(Config.alf[y]);
+                    }
+
+                    MessageBox.Show("Ok!");
+                    f.Close();
+
+                    Shifr.Overwhite();
+                    see();
+                    Shifr.raskl();
+
+                    New_element_Load(sender, e);
+                }
+                else
+                {
+                    if (Config.rus_lang)
+                    {
+                        MessageBox.Show("Такого символа нет");
+                    }
+                    else
+                    {
+                        MessageBox.Show("It is not had this symbol");
+                    }
+                }
+                
+            }
         }
     }
 }
