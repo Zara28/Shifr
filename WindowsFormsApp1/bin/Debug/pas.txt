@@ -1,4 +1,5 @@
-Zara28:null:2+]*uxijssosq9i
-Alyona:lider_id:2+iiFhggEF
-mki:null:2+jihgfedc<(
-My:shool_59:2+jFfhHdCC
+﻿Zara28:null|2+]*uxijssosq9i
+Alyona:lider_id|2+iiFhggEF
+My:shool_59|2+jFfhHdCC
+Anna:null|2+FFFFFFFFFF
+Сетевой город:sgo.cit73.ru/angular/school/studentdiary/|3+Tq85OzMvR

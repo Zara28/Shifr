@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Create));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Warning = new System.Windows.Forms.TextBox();
             this.textBox_name = new System.Windows.Forms.TextBox();
             this.label_name = new System.Windows.Forms.Label();
             this.button_save = new System.Windows.Forms.Button();
@@ -37,7 +38,6 @@
             this.textBox_password = new System.Windows.Forms.TextBox();
             this.textBox_site = new System.Windows.Forms.TextBox();
             this.labelhelpsite = new System.Windows.Forms.Label();
-            this.Warning = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +56,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(409, 260);
             this.panel1.TabIndex = 0;
+            // 
+            // Warning
+            // 
+            this.Warning.Location = new System.Drawing.Point(13, 154);
+            this.Warning.Multiline = true;
+            this.Warning.Name = "Warning";
+            this.Warning.ReadOnly = true;
+            this.Warning.Size = new System.Drawing.Size(384, 65);
+            this.Warning.TabIndex = 6;
             // 
             // textBox_name
             // 
@@ -103,6 +112,7 @@
             this.textBox_site.Name = "textBox_site";
             this.textBox_site.Size = new System.Drawing.Size(100, 26);
             this.textBox_site.TabIndex = 1;
+            this.textBox_site.TextChanged += new System.EventHandler(this.textBox_site_TextChanged);
             // 
             // labelhelpsite
             // 
@@ -111,15 +121,6 @@
             this.labelhelpsite.Name = "labelhelpsite";
             this.labelhelpsite.Size = new System.Drawing.Size(0, 20);
             this.labelhelpsite.TabIndex = 0;
-            // 
-            // Warning
-            // 
-            this.Warning.Location = new System.Drawing.Point(13, 154);
-            this.Warning.Multiline = true;
-            this.Warning.Name = "Warning";
-            this.Warning.ReadOnly = true;
-            this.Warning.Size = new System.Drawing.Size(384, 65);
-            this.Warning.TabIndex = 6;
             // 
             // Create
             // 

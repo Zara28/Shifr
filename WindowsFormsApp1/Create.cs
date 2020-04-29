@@ -143,9 +143,9 @@ namespace Encryption
                     Shifr.doit(stroka, Config.alf);
                     StreamWriter f = new StreamWriter("pas.txt", true);
                 string[] adress;
-                if(textBox_name.Text.Contains("https://"))
+                if(textBox_name.Text.Contains("https://") || textBox_name.Text.Contains("http://"))
                 {
-                    adress = textBox_name.Text.Split(new string[] { "https://" }, StringSplitOptions.RemoveEmptyEntries);
+                    adress = textBox_name.Text.Split(new string[] { "https://", "http://" }, StringSplitOptions.RemoveEmptyEntries);
                     f.WriteLine(textBox_site.Text + ":" + adress[0] + "|" + Convert.ToString(Config.dif) + "+" + Config.textshifr);
                 }
                 else
@@ -169,5 +169,9 @@ namespace Encryption
             Create_Load(sender, e);
         }
 
+        private void textBox_site_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

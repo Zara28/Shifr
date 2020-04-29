@@ -40,7 +40,7 @@ namespace Encryption
            
             if (Config.isit == false)
                 {
-                    DialogResult res = MessageBox.Show("Do you want change language \n Хотите изменить язык на русский?", "Language", MessageBoxButtons.YesNo);
+                    DialogResult res = MessageBox.Show("Do you want change language on russian?\n Хотите изменить язык на русский?", "Language", MessageBoxButtons.YesNo);
 
                     if (res == DialogResult.Yes)
                     {
