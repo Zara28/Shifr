@@ -91,6 +91,8 @@ namespace Encryption
                     }
                 }
                 f.Close();
+                label1.Text = textBox2.Text;
+                textBox2.Text = "";
             }
             Config.you_can = true;
 
@@ -134,6 +136,8 @@ namespace Encryption
             }
             f.Close();
             Editing_Load(sender, e);
+            comboBox1.SelectedItem = 0;
+            label1.Text = "";
         }
     }
 }

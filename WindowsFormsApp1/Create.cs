@@ -164,8 +164,13 @@ namespace Encryption
                         message = "Your password was saved!";
                     }
                     MessageBox.Show(message);
+
+                textBox_name.Clear();
+                textBox_site.Clear();
+                textBox_password.Clear();
             }
             Config.you_can = true;
+
             Create_Load(sender, e);
         }
 
