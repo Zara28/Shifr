@@ -38,11 +38,14 @@
             this.textBox_password = new System.Windows.Forms.TextBox();
             this.textBox_site = new System.Windows.Forms.TextBox();
             this.labelhelpsite = new System.Windows.Forms.Label();
+            this.pictureBox_eye = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_eye)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pictureBox_eye);
             this.panel1.Controls.Add(this.Warning);
             this.panel1.Controls.Add(this.textBox_name);
             this.panel1.Controls.Add(this.label_name);
@@ -122,6 +125,16 @@
             this.labelhelpsite.Size = new System.Drawing.Size(0, 20);
             this.labelhelpsite.TabIndex = 0;
             // 
+            // pictureBox_eye
+            // 
+            this.pictureBox_eye.Location = new System.Drawing.Point(225, 110);
+            this.pictureBox_eye.Name = "pictureBox_eye";
+            this.pictureBox_eye.Size = new System.Drawing.Size(28, 26);
+            this.pictureBox_eye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_eye.TabIndex = 7;
+            this.pictureBox_eye.TabStop = false;
+            this.pictureBox_eye.Click += new System.EventHandler(this.pictureBox_eye_Click);
+            // 
             // Create
             // 
             this.ClientSize = new System.Drawing.Size(409, 260);
@@ -135,6 +148,7 @@
             this.Load += new System.EventHandler(this.Create_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_eye)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -150,5 +164,6 @@
         private System.Windows.Forms.TextBox textBox_name;
         private System.Windows.Forms.Label label_name;
         private System.Windows.Forms.TextBox Warning;
+        private System.Windows.Forms.PictureBox pictureBox_eye;
     }
 }

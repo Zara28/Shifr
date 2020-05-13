@@ -47,6 +47,18 @@ namespace Encryption
                 }
 
             }
+            string have = textBox_password.Text;
+            if (!Config.visible_eye)
+            {
+                textBox_password.UseSystemPasswordChar = true;
+                pictureBox_eye.Image = new Bitmap("Resours\\close_eye.png");
+            }
+            else
+            {
+                textBox_password.UseSystemPasswordChar = false;
+                pictureBox_eye.Image = new Bitmap("Resours\\eye.png");
+            }
+            
         }
         public static void check_length(string stroka, string acc)
         {
@@ -177,6 +189,19 @@ namespace Encryption
         private void textBox_site_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox_eye_Click(object sender, EventArgs e)
+        {
+            if (!Config.visible_eye)
+            {
+                Config.visible_eye = true;
+            }
+            else
+            {
+                Config.visible_eye = false;
+            }
+            Create_Load(sender, e);
         }
     }
 }

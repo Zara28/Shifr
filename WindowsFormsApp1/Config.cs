@@ -12,8 +12,8 @@ namespace Encryption
         public static string textshifr;
         public static string textdeshifr;
         public static string adress;
-
-
+        public static bool visible_eye = false;
+     
         public static char[] alf = new char[100];
         public static string[] vs = new string[100];
 
